@@ -22,23 +22,28 @@ class site_type(db.Model):
 #The site table
 class site(db.Model):
     site_id = db.Column(db.Integer, primary_key=True)
-    country_id = db.Column(db.Integer)
-    site_type_id = db.Column(db.Integer)
+    country_id = db.Column(db.Integer, db.ForeignKey('country.country_id'))
+    site_type_id = db.Column(db.Integer, db.ForeignKey('site_type.site_type_id'))
     name = db.Column(db.String(45))
     latitude = db.Column(db.Integer)
     longitude = db.Column(db.Integer)
 
+    country = db.relationship('country', backref=db.backref('site', lazy=True))    
+    site_type = db.relationship('site_type', backref=db.backref('site', lazy=True))
+
 #The ms rate sample table
 class ms_rate_sample(db.Model):
     ms_rate_sample_id = db.Column(db.Integer, primary_key=True)
-    site_id = db.Column(db.Integer)
+    site_id = db.Column(db.Integer, db.ForeignKey('site.site_id'))
     date = db.Column(db.DATE)
     rate = db.Column(db.Integer)
+    
+    site = db.relationship('site', backref=db.backref('ms_rate_sample', lazy=True))
 
 #The drinking water sample table
 class drinking_water_sample(db.Model):
     drinking_water_sample_id = db.Column(db.Integer, primary_key=True)
-    site_id = db.Column(db.Integer)
+    site_id = db.Column(db.Integer, db.ForeignKey('site.site_id'))
     date = db.Column(db.DATE)
     population =db.Column(db.FLOAT)
     total_coliforms =db.Column(db.FLOAT)
@@ -99,6 +104,8 @@ class drinking_water_sample(db.Model):
     grossalpha_radioactivity =db.Column(db.FLOAT)
     grossbeta_radioactivity =db.Column(db.FLOAT)
     tritium =db.Column(db.FLOAT)
+    
+    site = db.relationship('site', backref=db.backref('drinking_water_sample', lazy=True))
 
 def __init__(self, title, body):
         self.title = title

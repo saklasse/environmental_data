@@ -72,7 +72,7 @@
             {% for sample in drinking_water_samples %}
                <tr>
 			<td>{{ sample.drinking_water_sample_id }}</td>
-			<td>{{ sample.site_id }}</td>
+			<td>{{ sample.site.name }}</td>
 			<td>{{ sample.date }}</td>
 			<td>{{ sample.population }}</td>
 			<td>{{ sample.total_coliforms }}</td>

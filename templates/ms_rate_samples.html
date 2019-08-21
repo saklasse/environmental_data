@@ -14,7 +14,7 @@
             {% for ms_rate in ms_rate_samples %}
                <tr>
                   <td>{{ ms_rate.ms_rate_sample_id }}</td>
-                  <td>{{ ms_rate.site_id }}</td>
+                  <td>{{ ms_rate.site.name }}</td>
                   <td>{{ ms_rate.date }}</td>
                   <td>{{ ms_rate.rate }}</td>
                </tr>

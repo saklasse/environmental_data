@@ -16,8 +16,8 @@
             {% for site in sites %}
                <tr>
                   <td>{{ site.site_id }}</td>
-                  <td>{{ site.country_id }}</td>
-                  <td>{{ site.site_type_id }}</td>
+                  <td>{{ site.country.name}}</td>
+                  <td>{{ site.site_type.name }}</td>
                   <td>{{ site.name }}</td>
                   <td>{{ site.latitude }}</td>
                   <td>{{ site.longitude }}</td>
