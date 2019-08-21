@@ -1,0 +1,23 @@
+<h3>Environmental Health App</h3>
+<a href="/">Back</a>
+      <table>
+         <thead>
+            <tr>
+               <th>ID</th>
+               <th>Site ID</th>
+               <th>Date</th>
+               <th>rate</th>
+            </tr>
+         </thead>
+
+         <tbody>
+            {% for ms_rate in ms_rate_samples %}
+               <tr>
+                  <td>{{ ms_rate.ms_rate_sample_id }}</td>
+                  <td>{{ ms_rate.site_id }}</td>
+                  <td>{{ ms_rate.date }}</td>
+                  <td>{{ ms_rate.rate }}</td>
+               </tr>
+            {% endfor %}
+         </tbody>
+      </table>

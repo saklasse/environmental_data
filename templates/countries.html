@@ -1,0 +1,22 @@
+<h3>Environmental Health App</h3>
+<a href="/">Back</a>
+<br>
+
+
+<table>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        {% for country in countries %}
+        <tr>
+            <td>{{ country.country_id }}</td>
+            <td>{{ country.name }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>

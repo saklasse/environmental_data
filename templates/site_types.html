@@ -1,0 +1,19 @@
+<h3>Environmental Health App</h3>
+<a href="/">Back</a>
+      <table>
+         <thead>
+            <tr>
+               <th>ID</th>
+               <th>Name</th>
+            </tr>
+         </thead>
+
+         <tbody>
+            {% for site_type in site_types %}
+               <tr>
+                  <td>{{ site_type.site_type_id }}</td>
+                  <td>{{ site_type.name }}</td>
+               </tr>
+            {% endfor %}
+         </tbody>
+      </table>
