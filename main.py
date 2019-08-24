@@ -1,4 +1,4 @@
-from flask import Flask, render_template, redirect, request
+from flask import Flask, render_template, redirect, request, url_for
 from flask_sqlalchemy import SQLAlchemy
 import os
 import secrets
@@ -122,6 +122,16 @@ def list_countries():
 @app.route('/site', methods = ['GET'])
 def list_sites():
    return render_template('sites.html', sites = site.query.all() )
+   
+@app.route('/newCountry', methods=['GET', 'POST'])
+def newCountry():
+    if request.method == 'POST':
+        newCountry = country(name=request.form['name'])
+        db.session.add(newCountry)
+        db.session.commit()
+        return redirect(url_for('list_countries'))
+    else:
+        return render_template('newCountry.html')
 
 @app.route('/site_type', methods = ['GET'])
 def list_sites_types():
