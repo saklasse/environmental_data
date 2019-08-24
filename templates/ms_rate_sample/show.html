@@ -1,0 +1,26 @@
+<h3>Environmental Health App</h3>
+<a href="/">Back</a>
+<a href="/newMsRateSample">New</a>
+  <table>
+     <thead>
+        <tr>
+           <th>ID</th>
+           <th>Site ID</th>
+           <th>Date</th>
+           <th>rate</th>
+        </tr>
+     </thead>
+
+     <tbody>
+        {% for ms_rate in ms_rate_samples %}
+           <tr>
+              <td>{{ ms_rate.ms_rate_sample_id }}</td>
+              <td>{{ ms_rate.site.name }}</td>
+              <td>{{ ms_rate.date }}</td>
+              <td>{{ ms_rate.rate }}</td>
+              <td><a href="{{url_for('editMsRateSample', ms_rate_sample_id = ms_rate.ms_rate_sample_id )}}">Edit</a></td>
+              <td><a href="{{url_for('deleteMsRateSample', ms_rate_sample_id = ms_rate.ms_rate_sample_id )}}">Delete</a></td>
+           </tr>
+        {% endfor %}
+     </tbody>
+  </table>

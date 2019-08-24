@@ -1,0 +1,11 @@
+<h3>Environmental Health App</h3>
+
+<form action="{{ url_for('deleteMsRateSample', ms_rate_sample_id = MsRateSampleToDelete.ms_rate_sample_id)}}" method="post">
+   <div class="form-group">
+     <label for="name">Are you sure you want to delete "{{MsRateSampleToDelete.site.name }}"?</label>
+     <button type="submit">Delete</button>
+     <a href='{{url_for('list_ms_rate_samples')}}'>
+        Cancel
+     </a>
+   </div>
+</form>

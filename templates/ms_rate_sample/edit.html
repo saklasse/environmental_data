@@ -1,0 +1,17 @@
+<h3>Environmental Health App</h3>
+
+<form action="{{ url_for('editMsRateSample', ms_rate_sample_id = editedMsRateSample.ms_rate_sample_id)}}" method="post">
+   <div class="form-group">
+       <label for="site_id">Site ID:</label>
+       <input type="text" class="form-control" name="site_id" value="{{editedMsRateSample.site_id }}"><br>
+       <label for="date">Date:</label>
+       <input type="text" class="form-control" name="date" value="{{editedMsRateSample.date }}"><br>
+       <label for="rate">Rate (per 100000):</label>
+       <input type="text" class="form-control" name="rate" value="{{editedMsRateSample.rate }}"><br>
+
+       <button type="submit">Update</button>
+       <a href='{{url_for('list_ms_rate_samples')}}'>
+           <button>Cancel</button>
+       </a>
+   </div>
+</form>
