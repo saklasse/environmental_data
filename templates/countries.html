@@ -17,6 +17,7 @@
         <tr>
             <td>{{ country.country_id }}</td>
             <td>{{ country.name }}</td>
+            <td><a href="{{url_for('editCountry', country_id = country.country_id )}}">Edit</a></td>
         </tr>
         {% endfor %}
     </tbody>

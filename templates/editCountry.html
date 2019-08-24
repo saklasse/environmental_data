@@ -1,0 +1,14 @@
+<h3>Environmental Health App</h3>
+
+<form action="{{ url_for('editCountry', country_id = country.country_id)}}" method="post">
+   <div class="form-group">
+       <label for="name">Name:</label>
+       <input type="text" class="form-control" name="name" value="{{country.name }}">
+
+
+       <button type="submit">Update</button>
+       <a href='{{url_for('list_countries')}}'>
+           <button>Cancel</button>
+       </a>
+   </div>
+</form>
