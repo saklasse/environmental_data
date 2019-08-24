@@ -5,21 +5,23 @@
 
 
 <table>
-    <thead>
-        <tr>
-            <th>ID</th>
-            <th>Name</th>
-        </tr>
-    </thead>
+ <thead>
+  <tr>
+   <th>ID</th>
+   <th>Name</th>
+  </tr>
+ </thead>
 
-    <tbody>
-        {% for country in countries %}
-        <tr>
-            <td>{{ country.country_id }}</td>
-            <td>{{ country.name }}</td>
-            <td><a href="{{url_for('editCountry', country_id = country.country_id )}}">Edit</a></td>
-            <td><a href="{{url_for('deleteCountry', country_id = country.country_id )}}">Delete</a></td>
-        </tr>
-        {% endfor %}
-    </tbody>
+ <tbody>
+  {% for country in countries %}
+  <tr>
+   <td>{{ country.country_id }}</td>
+   <td>{{ country.name }}</td>
+   <td><a
+    href="{{url_for('editCountry', country_id = country.country_id )}}">Edit</a></td>
+   <td><a
+    href="{{url_for('deleteCountry', country_id = country.country_id )}}">Delete</a></td>
+  </tr>
+  {% endfor %}
+ </tbody>
 </table>

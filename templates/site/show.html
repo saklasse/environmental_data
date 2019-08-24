@@ -1,27 +1,27 @@
 <h3>Environmental Health App</h3>
 <a href="/">Back</a>
-      <table>
-         <thead>
-            <tr>
-               <th>ID</th>
-               <th>Country ID</th>
-               <th>Site Type ID</th>
-               <th>Name</th>
-               <th>latitude</th>
-               <th>longitude</th>
-            </tr>
-         </thead>
+<table>
+ <thead>
+  <tr>
+   <th>ID</th>
+   <th>Country ID</th>
+   <th>Site Type ID</th>
+   <th>Name</th>
+   <th>latitude</th>
+   <th>longitude</th>
+  </tr>
+ </thead>
 
-         <tbody>
-            {% for site in sites %}
-               <tr>
-                  <td>{{ site.site_id }}</td>
-                  <td>{{ site.country.name}}</td>
-                  <td>{{ site.site_type.name }}</td>
-                  <td>{{ site.name }}</td>
-                  <td>{{ site.latitude }}</td>
-                  <td>{{ site.longitude }}</td>
-               </tr>
-            {% endfor %}
-         </tbody>
-      </table>
+ <tbody>
+  {% for site in sites %}
+  <tr>
+   <td>{{ site.site_id }}</td>
+   <td>{{ site.country.name}}</td>
+   <td>{{ site.site_type.name }}</td>
+   <td>{{ site.name }}</td>
+   <td>{{ site.latitude }}</td>
+   <td>{{ site.longitude }}</td>
+  </tr>
+  {% endfor %}
+ </tbody>
+</table>

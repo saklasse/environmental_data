@@ -1,139 +1,139 @@
 <h3>Environmental Health App</h3>
 <a href="/">Back</a>
-      <table>
-         <thead>
-            <tr>
-		<th>drinking_water_sample_id</th>
-		<th>site_id</th>
-		<th>date</th>
-		<th>population</th>
-		<th>total_coliforms</th>
-		<th>e_coli</th>
-		<th>heterotrophic_plate_count</th>
-		<th>ph</th>
-		<th>alkalinity</th>
-		<th>bromide</th>
-		<th>calcium</th>
-		<th>chlorate</th>
-		<th>chloride</th>
-		<th>chlorine</th>
-		<th>fluoride</th>
-		<th>magnesium</th>
-		<th>potassium</th>
-		<th>silicon</th>
-		<th>sodium</th>
-		<th>sulphate</th>
-		<th>calcium_hardness</th>
-		<th>nitrate</th>
-		<th>nitrite</th>
-		<th>aluminum</th>
-		<th>barium</th>
-		<th>boron</th>
-		<th>cadmium</th>
-		<th>chromium</th>
-		<th>chromium_vi</th>
-		<th>copper</th>
-		<th>iron</th>
-		<th>lead</th>
-		<th>manganese</th>
-		<th>mercury</th>
-		<th>nickel</th>
-		<th>selenium</th>
-		<th>strontium</th>
-		<th>uranium</th>
-		<th>vanadium</th>
-		<th>zinc</th>
-		<th>atrazine_metabolites</th>
-		<th>diazinon</th>
-		<th>dicamba</th>
-		<th>dichloromethane</th>
-		<th>diclofop_methyl</th>
-		<th>metolachlor</th>
-		<th>picloram</th>
-		<th>simazine</th>
-		<th>chloroform</th>
-		<th>bromodichloromethane</th>
-		<th>dibromochloromethane</th>
-		<th>total_trihalomethanes</th>
-		<th>dichloroacetic_acid</th>
-		<th>trichloroacetic_acid</th>
-		<th>bromochloroacetic_acid</th>
-		<th>total_haloacetic_acids_haa5</th>
-		<th>caffeine</th>
-		<th>metformin</th>
-		<th>total_organic_carbon</th>
-		<th>grossalpha_radioactivity</th>
-		<th>grossbeta_radioactivity</th>
-		<th>tritium</th>
-            </tr>
-         </thead>
+<table>
+ <thead>
+  <tr>
+   <th>drinking_water_sample_id</th>
+   <th>site_id</th>
+   <th>date</th>
+   <th>population</th>
+   <th>total_coliforms</th>
+   <th>e_coli</th>
+   <th>heterotrophic_plate_count</th>
+   <th>ph</th>
+   <th>alkalinity</th>
+   <th>bromide</th>
+   <th>calcium</th>
+   <th>chlorate</th>
+   <th>chloride</th>
+   <th>chlorine</th>
+   <th>fluoride</th>
+   <th>magnesium</th>
+   <th>potassium</th>
+   <th>silicon</th>
+   <th>sodium</th>
+   <th>sulphate</th>
+   <th>calcium_hardness</th>
+   <th>nitrate</th>
+   <th>nitrite</th>
+   <th>aluminum</th>
+   <th>barium</th>
+   <th>boron</th>
+   <th>cadmium</th>
+   <th>chromium</th>
+   <th>chromium_vi</th>
+   <th>copper</th>
+   <th>iron</th>
+   <th>lead</th>
+   <th>manganese</th>
+   <th>mercury</th>
+   <th>nickel</th>
+   <th>selenium</th>
+   <th>strontium</th>
+   <th>uranium</th>
+   <th>vanadium</th>
+   <th>zinc</th>
+   <th>atrazine_metabolites</th>
+   <th>diazinon</th>
+   <th>dicamba</th>
+   <th>dichloromethane</th>
+   <th>diclofop_methyl</th>
+   <th>metolachlor</th>
+   <th>picloram</th>
+   <th>simazine</th>
+   <th>chloroform</th>
+   <th>bromodichloromethane</th>
+   <th>dibromochloromethane</th>
+   <th>total_trihalomethanes</th>
+   <th>dichloroacetic_acid</th>
+   <th>trichloroacetic_acid</th>
+   <th>bromochloroacetic_acid</th>
+   <th>total_haloacetic_acids_haa5</th>
+   <th>caffeine</th>
+   <th>metformin</th>
+   <th>total_organic_carbon</th>
+   <th>grossalpha_radioactivity</th>
+   <th>grossbeta_radioactivity</th>
+   <th>tritium</th>
+  </tr>
+ </thead>
 
-         <tbody>
-            {% for sample in drinking_water_samples %}
-               <tr>
-			<td>{{ sample.drinking_water_sample_id }}</td>
-			<td>{{ sample.site.name }}</td>
-			<td>{{ sample.date }}</td>
-			<td>{{ sample.population }}</td>
-			<td>{{ sample.total_coliforms }}</td>
-			<td>{{ sample.e_coli }}</td>
-			<td>{{ sample.heterotrophic_plate_count }}</td>
-			<td>{{ sample.ph }}</td>
-			<td>{{ sample.alkalinity }}</td>
-			<td>{{ sample.bromide }}</td>
-			<td>{{ sample.calcium }}</td>
-			<td>{{ sample.chlorate }}</td>
-			<td>{{ sample.chloride }}</td>
-			<td>{{ sample.chlorine }}</td>
-			<td>{{ sample.fluoride }}</td>
-			<td>{{ sample.magnesium }}</td>
-			<td>{{ sample.potassium }}</td>
-			<td>{{ sample.silicon }}</td>
-			<td>{{ sample.sodium }}</td>
-			<td>{{ sample.sulphate }}</td>
-			<td>{{ sample.calcium_hardness }}</td>
-			<td>{{ sample.nitrate }}</td>
-			<td>{{ sample.nitrite }}</td>
-			<td>{{ sample.aluminum }}</td>
-			<td>{{ sample.barium }}</td>
-			<td>{{ sample.boron }}</td>
-			<td>{{ sample.cadmium }}</td>
-			<td>{{ sample.chromium }}</td>
-			<td>{{ sample.chromium_vi }}</td>
-			<td>{{ sample.copper }}</td>
-			<td>{{ sample.iron }}</td>
-			<td>{{ sample.lead }}</td>
-			<td>{{ sample.manganese }}</td>
-			<td>{{ sample.mercury }}</td>
-			<td>{{ sample.nickel }}</td>
-			<td>{{ sample.selenium }}</td>
-			<td>{{ sample.strontium }}</td>
-			<td>{{ sample.uranium }}</td>
-			<td>{{ sample.vanadium }}</td>
-			<td>{{ sample.zinc }}</td>
-			<td>{{ sample.atrazine_metabolites }}</td>
-			<td>{{ sample.diazinon }}</td>
-			<td>{{ sample.dicamba }}</td>
-			<td>{{ sample.dichloromethane }}</td>
-			<td>{{ sample.diclofop_methyl }}</td>
-			<td>{{ sample.metolachlor }}</td>
-			<td>{{ sample.picloram }}</td>
-			<td>{{ sample.simazine }}</td>
-			<td>{{ sample.chloroform }}</td>
-			<td>{{ sample.bromodichloromethane }}</td>
-			<td>{{ sample.dibromochloromethane }}</td>
-			<td>{{ sample.total_trihalomethanes }}</td>
-			<td>{{ sample.dichloroacetic_acid }}</td>
-			<td>{{ sample.trichloroacetic_acid }}</td>
-			<td>{{ sample.bromochloroacetic_acid }}</td>
-			<td>{{ sample.total_haloacetic_acids_haa5 }}</td>
-			<td>{{ sample.caffeine }}</td>
-			<td>{{ sample.metformin }}</td>
-			<td>{{ sample.total_organic_carbon }}</td>
-			<td>{{ sample.grossalpha_radioactivity }}</td>
-			<td>{{ sample.grossbeta_radioactivity }}</td>
-			<td>{{ sample.tritium }}</td>
-               </tr>
-            {% endfor %}
-         </tbody>
-      </table>
+ <tbody>
+  {% for sample in drinking_water_samples %}
+  <tr>
+   <td>{{ sample.drinking_water_sample_id }}</td>
+   <td>{{ sample.site.name }}</td>
+   <td>{{ sample.date }}</td>
+   <td>{{ sample.population }}</td>
+   <td>{{ sample.total_coliforms }}</td>
+   <td>{{ sample.e_coli }}</td>
+   <td>{{ sample.heterotrophic_plate_count }}</td>
+   <td>{{ sample.ph }}</td>
+   <td>{{ sample.alkalinity }}</td>
+   <td>{{ sample.bromide }}</td>
+   <td>{{ sample.calcium }}</td>
+   <td>{{ sample.chlorate }}</td>
+   <td>{{ sample.chloride }}</td>
+   <td>{{ sample.chlorine }}</td>
+   <td>{{ sample.fluoride }}</td>
+   <td>{{ sample.magnesium }}</td>
+   <td>{{ sample.potassium }}</td>
+   <td>{{ sample.silicon }}</td>
+   <td>{{ sample.sodium }}</td>
+   <td>{{ sample.sulphate }}</td>
+   <td>{{ sample.calcium_hardness }}</td>
+   <td>{{ sample.nitrate }}</td>
+   <td>{{ sample.nitrite }}</td>
+   <td>{{ sample.aluminum }}</td>
+   <td>{{ sample.barium }}</td>
+   <td>{{ sample.boron }}</td>
+   <td>{{ sample.cadmium }}</td>
+   <td>{{ sample.chromium }}</td>
+   <td>{{ sample.chromium_vi }}</td>
+   <td>{{ sample.copper }}</td>
+   <td>{{ sample.iron }}</td>
+   <td>{{ sample.lead }}</td>
+   <td>{{ sample.manganese }}</td>
+   <td>{{ sample.mercury }}</td>
+   <td>{{ sample.nickel }}</td>
+   <td>{{ sample.selenium }}</td>
+   <td>{{ sample.strontium }}</td>
+   <td>{{ sample.uranium }}</td>
+   <td>{{ sample.vanadium }}</td>
+   <td>{{ sample.zinc }}</td>
+   <td>{{ sample.atrazine_metabolites }}</td>
+   <td>{{ sample.diazinon }}</td>
+   <td>{{ sample.dicamba }}</td>
+   <td>{{ sample.dichloromethane }}</td>
+   <td>{{ sample.diclofop_methyl }}</td>
+   <td>{{ sample.metolachlor }}</td>
+   <td>{{ sample.picloram }}</td>
+   <td>{{ sample.simazine }}</td>
+   <td>{{ sample.chloroform }}</td>
+   <td>{{ sample.bromodichloromethane }}</td>
+   <td>{{ sample.dibromochloromethane }}</td>
+   <td>{{ sample.total_trihalomethanes }}</td>
+   <td>{{ sample.dichloroacetic_acid }}</td>
+   <td>{{ sample.trichloroacetic_acid }}</td>
+   <td>{{ sample.bromochloroacetic_acid }}</td>
+   <td>{{ sample.total_haloacetic_acids_haa5 }}</td>
+   <td>{{ sample.caffeine }}</td>
+   <td>{{ sample.metformin }}</td>
+   <td>{{ sample.total_organic_carbon }}</td>
+   <td>{{ sample.grossalpha_radioactivity }}</td>
+   <td>{{ sample.grossbeta_radioactivity }}</td>
+   <td>{{ sample.tritium }}</td>
+  </tr>
+  {% endfor %}
+ </tbody>
+</table>
