@@ -144,6 +144,16 @@ def editCountry(country_id):
             return redirect(url_for('list_countries'))
     else:
         return render_template('editCountry.html', country = editedCountry )
+        
+@app.route('/<int:country_id>/deleteCountry', methods=['GET', 'POST'])
+def deleteCountry(country_id):
+    countryToDelete = db.session.query(country).filter_by(country_id=country_id).one()
+    if request.method == 'POST':
+        db.session.delete(countryToDelete)
+        db.session.commit()
+        return redirect(url_for('list_countries'))
+    else:
+        return render_template('deleteCountry.html', country = countryToDelete )
 
 @app.route('/site_type', methods = ['GET'])
 def list_sites_types():
