@@ -4,12 +4,16 @@
  action="{{ url_for('editMsRateSample', ms_rate_sample_id = editedMsRateSample.ms_rate_sample_id)}}"
  method="post">
  <div class="form-group">
-  <label for="site_id">Site ID:</label> <input type="text"
-   class="form-control" name="site_id"
-   value="{{editedMsRateSample.site_id }}"><br> <label
-   for="date">Date:</label> <input type="text" class="form-control"
-   name="date" value="{{editedMsRateSample.date }}"><br> <label
-   for="rate">Rate (per 100000):</label> <input type="text"
+  <label for="site_id">Site ID:</label> <select name="site_id"
+   width="300px"> {% for s in site %} {% if s.site_id ==
+   editedMsRateSample.site_id %}
+   <option value="{{ s.site_id }}" SELECTED>{{ s.name }}</option> {%
+   else %}
+   <option value="{{ s.site_id }}">{{ s.name }}</option> {% endif %} {%
+   endfor %}
+  </select> <br> <label for="date">Date:</label> <input type="text"
+   class="form-control" name="date" value="{{editedMsRateSample.date }}"><br>
+  <label for="rate">Rate (per 100000):</label> <input type="text"
    class="form-control" name="rate" value="{{editedMsRateSample.rate }}"><br>
 
   <button type="submit">Update</button>

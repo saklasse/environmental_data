@@ -202,7 +202,7 @@ def editMsRateSample(ms_rate_sample_id):
             db.session.commit()
             return redirect(url_for('list_ms_rate_samples'))
     else:
-        return render_template('ms_rate_sample/edit.html', editedMsRateSample=editedMsRateSample)
+        return render_template('ms_rate_sample/edit.html', editedMsRateSample=editedMsRateSample, site=site.query.all())
 
         
 @app.route('/<int:ms_rate_sample_id>/deleteMsRateSample', methods=['GET', 'POST'])
