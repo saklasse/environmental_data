@@ -4,11 +4,13 @@
 
 <form action="#" method="post">
  <div class="form-group">
-  <label for="site_id">Site ID:</label> <input type="text"
-   maxlength="100" name="site_id" placeholder="Site ID"><br>
-  <label for="date">Date:</label> <input type="text" maxlength="100"
-   name="date"><br> <label for="rate">Rate (per
-   100000):</label> <input type="text" maxlength="100" name="rate"><br>
+  <label for="site_id">Site:</label> <select name="site_id"
+   width="300px"> {% for s in site %}
+   <option value="{{ s.site_id }}" SELECTED>{{ s.name }}</option> {%
+   endfor %}
+  </select><br> <label for="date">Date:</label> <input type="text"
+   maxlength="100" name="date"><br> <label for="rate">Rate
+   (per 100000):</label> <input type="text" maxlength="100" name="rate"><br>
 
   <button type="submit">Create</button>
  </div>

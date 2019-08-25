@@ -181,12 +181,12 @@ def list_ms_rate_samples():
 @app.route('/newMsRateSample', methods=['GET', 'POST'])
 def newMsRateSample():
     if request.method == 'POST':
-        newMsRateSample = ms_rate_sample(site_id=request.form['site_id'], date=request.form['date'], rate=request.form['rate'])
+        newMsRateSample = ms_rate_sample(site_id=request.form.get('site_id'), date=request.form['date'], rate=request.form['rate'])
         db.session.add(newMsRateSample)
         db.session.commit()
         return redirect(url_for('list_ms_rate_samples'))
     else:
-        return render_template('ms_rate_sample/new.html')
+        return render_template('ms_rate_sample/new.html', site=site.query.all())
 
 
 @app.route('/<int:ms_rate_sample_id>/editMsRateSample', methods=['GET', 'POST'])
