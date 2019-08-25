@@ -13,8 +13,7 @@
    class="form-control" name="rate" value="{{editedMsRateSample.rate }}"><br>
 
   <button type="submit">Update</button>
-  <a href='{{url_for('list_ms_rate_samples')}}'>
-   <button>Cancel</button>
-  </a>
+  <input type="button" onclick="location.href='/ms_sample_rate';"
+   value="Cancel" />
  </div>
 </form>
