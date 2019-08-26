@@ -1,0 +1,15 @@
+<h3>Environmental Health App</h3>
+
+<form
+ action="{{ url_for('editSiteType', site_type_id = site_type.site_type_id)}}"
+ method="post">
+ <div class="form-group">
+  <label for="name">Name:</label> <input type="text"
+   class="form-control" name="name" value="{{site_type.name }}">
+
+
+  <button type="submit">Update</button>
+  <input type="button" onclick="location.href='/site_type';"
+   value="Cancel" />
+ </div>
+</form>

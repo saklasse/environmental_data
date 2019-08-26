@@ -128,6 +128,50 @@ def list_sites():
    return render_template('site/show.html', sites=site.query.all())
 
 
+@app.route('/newSite', methods=['GET', 'POST'])
+def newSite():
+    if request.method == 'POST':
+        newSite = site(country_id=request.form.get('country_id'),
+                       site_type_id=request.form.get('site_type_id'),
+                       name=request.form['name'],
+                       latitude=request.form['latitude'],
+                       longitude=request.form['longitude'])
+        db.session.add(newSite)
+        db.session.commit()
+        return redirect(url_for('list_sites'))
+    else:
+        return render_template('site/new.html', country=country.query.all(), site_type=site_type.query.all())
+
+
+@app.route('/<int:site_id>/editSite', methods=['GET', 'POST'])
+def editSite(site_id):
+    editedSite = db.session.query(site).filter_by(site_id=site_id).one()
+    if request.method == 'POST':
+        if request.form['name']:
+            editedSite.country_id = request.form.get('country_id')
+            editedSite.site_type_id = request.form.get('site_type_id')
+            editedSite.name = request.form['name']
+            editedSite.latitude = request.form['latitude']
+            editedSite.longitude = request.form['longitude']
+
+            db.session.add(editedSite)
+            db.session.commit()
+            return redirect(url_for('list_sites'))
+    else:
+        return render_template('site/edit.html', site=editedSite, country=country.query.all(), site_type=site_type.query.all())
+
+        
+@app.route('/<int:site_id>/deleteSite', methods=['GET', 'POST'])
+def deleteSite(site_id):
+    siteToDelete = db.session.query(site).filter_by(site_id=site_id).one()
+    if request.method == 'POST':
+        db.session.delete(siteToDelete)
+        db.session.commit()
+        return redirect(url_for('list_sites'))
+    else:
+        return render_template('site/delete.html', site=siteToDelete)
+
+
 @app.route('/country', methods=['GET'])
 def list_countries():
    return render_template('country/show.html', countries=country.query.all())
@@ -187,6 +231,41 @@ def newMsRateSample():
         return redirect(url_for('list_ms_rate_samples'))
     else:
         return render_template('ms_rate_sample/new.html', site=site.query.all())
+
+
+@app.route('/newSiteType', methods=['GET', 'POST'])
+def newSiteType():
+    if request.method == 'POST':
+        newSiteType = site_type(name=request.form['name'])
+        db.session.add(newSiteType)
+        db.session.commit()
+        return redirect(url_for('list_sites_types'))
+    else:
+        return render_template('site_type/new.html')
+
+
+@app.route('/<int:site_type_id>/editSiteType', methods=['GET', 'POST'])
+def editSiteType(site_type_id):
+    editedSite = db.session.query(site_type).filter_by(site_type_id=site_type_id).one()
+    if request.method == 'POST':
+        if request.form['name']:
+            editedSite.name = request.form['name']
+            db.session.add(editedSite)
+            db.session.commit()
+            return redirect(url_for('list_sites_types'))
+    else:
+        return render_template('site_type/edit.html', site_type=editedSite)
+
+        
+@app.route('/<int:site_type_id>/deleteSiteType', methods=['GET', 'POST'])
+def deleteSiteType(site_type_id):
+    siteTypeToDelete = db.session.query(site_type).filter_by(site_type_id=site_type_id).one()
+    if request.method == 'POST':
+        db.session.delete(siteTypeToDelete)
+        db.session.commit()
+        return redirect(url_for('list_sites_types'))
+    else:
+        return render_template('site_type/delete.html', site_type=siteTypeToDelete)
 
 
 @app.route('/<int:ms_rate_sample_id>/editMsRateSample', methods=['GET', 'POST'])

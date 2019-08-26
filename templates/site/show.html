@@ -1,5 +1,6 @@
 <h3>Environmental Health App</h3>
 <a href="/">Back</a>
+<a href="/newSite">New</a>
 <table>
  <thead>
   <tr>
@@ -21,6 +22,8 @@
    <td>{{ site.name }}</td>
    <td>{{ site.latitude }}</td>
    <td>{{ site.longitude }}</td>
+   <td><a href="{{url_for('editSite', site_id = site.site_id )}}">Edit</a></td>
+   <td><a href="{{url_for('deleteSite', site_id = site.site_id )}}">Delete</a></td>
   </tr>
   {% endfor %}
  </tbody>
