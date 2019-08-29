@@ -1,0 +1,229 @@
+<style>
+label {
+	width: 200px;
+	text-align: left;
+	float: left;
+}
+</style>
+
+
+<h3>Environmental Health App</h3>
+
+<form
+ action="{{ url_for('editDrinkingWaterSample', drinking_water_sample_id = editedDrinkingWaterSample.drinking_water_sample_id)}}"
+ method="post">
+ <div class="form-group">
+
+  <label for="site_id">Site ID:</label> <select name="site_id" width="300px"> {% for s in
+   site %} {% if s.site_id == editedDrinkingWaterSample.site_id %}
+   <option value="{{ s.site_id }}" SELECTED>{{ s.name }}</option> {% else %}
+   <option value="{{ s.site_id }}">{{ s.name }}</option> {% endif %} {% endfor %}
+  </select><br> <label for="date">Date:</label> <input type="text" maxlength="100" name="date"
+   value="{{editedDrinkingWaterSample.date }}"><br> <label for="population">Population:</label>
+  <input type="number" name="population" step=1 value="{{editedDrinkingWaterSample.population }}"><br>
+  <label for="total_coliforms">Total Coliforms:</label> <input type="number" name="total_coliforms"
+   step=0.00001 value="{{editedDrinkingWaterSample.total_coliforms }}"><input type="radio"
+   name="total_coliforms_units" value="1" checked>cfu/100ml<br> <label for="e_coli">E.
+   Coli:</label> <input type="number" name="e_coli" step=0.00001
+   value="{{editedDrinkingWaterSample.e_coli }}"><input type="radio" name="e_coli_units"
+   value="1" checked>cfu/100ml<br> <label for="heterotrophic_plate_count">Heterotrophic
+   Plate Count:</label> <input type="number" name="heterotrophic_plate_count" step=0.00001
+   value="{{editedDrinkingWaterSample.heterotrophic_plate_count }}"><input type="radio"
+   name="heterotrophic_plate_count_units" value="1" checked>cfu/ml<br> <label for="ph">PH:</label>
+  <input type="number" name="ph" step=0.00001 value="{{editedDrinkingWaterSample.ph }}"><input
+   type="radio" name="ph_units" value="1" checked>log10<br> <label for="alkalinity">Alkalinity:</label>
+  <input type="number" name="alkalinity" step=0.00001
+   value="{{editedDrinkingWaterSample.alkalinity }}"><input type="radio"
+   name="alkalinity_units" value="1" checked>mg/L<input type="radio" name="alkalinity_units"
+   value="1000">ug/L<br> <label for="bromide">Bromide:</label> <input type="number"
+   name="bromide" step=0.00001 value="{{editedDrinkingWaterSample.bromide }}"><input
+   type="radio" name="bromide_units" value="1" checked>mg/L<input type="radio"
+   name="bromide_units" value="1000">ug/L<br> <label for="calcium">Calcium:</label> <input
+   type="number" name="calcium" step=0.00001 value="{{editedDrinkingWaterSample.calcium }}"><input
+   type="radio" name="calcium_units" value="1" checked>mg/L<input type="radio"
+   name="calcium_units" value="1000">ug/L<br> <label for="chlorate">Chlorate:</label> <input
+   type="number" name="chlorate" step=0.00001 value="{{editedDrinkingWaterSample.chlorate }}"><input
+   type="radio" name="chlorate_units" value="1" checked>mg/L<input type="radio"
+   name="chlorate_units" value="1000">ug/L<br> <label for="chloride">Chloride:</label>
+  <input type="number" name="chloride" step=0.00001 value="{{editedDrinkingWaterSample.chloride }}"><input
+   type="radio" name="chloride_units" value="1" checked>mg/L<input type="radio"
+   name="chloride_units" value="1000">ug/L<br> <label for="chlorine">Chlorine:</label>
+  <input type="number" name="chlorine" step=0.00001 value="{{editedDrinkingWaterSample.chlorine }}"><input
+   type="radio" name="chlorine_units" value="1" checked>mg/L<input type="radio"
+   name="chlorine_units" value="1000">ug/L<br> <label for="fluoride">Fluoride:</label>
+  <input type="number" name="fluoride" step=0.00001 value="{{editedDrinkingWaterSample.fluoride }}"><input
+   type="radio" name="fluoride_units" value="1" checked>mg/L<input type="radio"
+   name="fluoride_units" value="1000">ug/L<br> <label for="magnesium">Magnesium:</label>
+  <input type="number" name="magnesium" step=0.00001
+   value="{{editedDrinkingWaterSample.magnesium }}"><input type="radio"
+   name="magnesium_units" value="1" checked>mg/L<input type="radio" name="magnesium_units"
+   value="1000">ug/L<br> <label for="potassium">Potassium:</label> <input type="number"
+   name="potassium" step=0.00001 value="{{editedDrinkingWaterSample.potassium }}"><input
+   type="radio" name="postassium_units" value="1" checked>mg/L<input type="radio"
+   name="postassium_units" value="1000">ug/L<br> <label for="silicon">Silicon:</label>
+  <input type="number" name="silicon" step=0.00001 value="{{editedDrinkingWaterSample.silicon }}"><input
+   type="radio" name="silicon_units" value="1" checked>mg/L<input type="radio"
+   name="silicon_units" value="1000">ug/L<br> <label for="sodium">Sodium:</label> <input
+   type="number" name="sodium" step=0.00001 value="{{editedDrinkingWaterSample.sodium }}"><input
+   type="radio" name="sodium_units" value="1" checked>mg/L<input type="radio"
+   name="sodium_units" value="1000">ug/L<br> <label for="sulphate">Sulphate:</label> <input
+   type="number" name="sulphate" step=0.00001 value="{{editedDrinkingWaterSample.sulphate }}"><input
+   type="radio" name="sulphate_units" value="1" checked>mg/L<input type="radio"
+   name="sulphate_units" value="1000">ug/L<br> <label for="calcium_hardness">Calcium
+   Hardness:</label> <input type="number" name="calcium_hardness" step=0.00001
+   value="{{editedDrinkingWaterSample.calcium_hardness }}"><input type="radio"
+   name="calcium_hardness_units" value="1" checked>mg/L<input type="radio"
+   name="calcium_hardness_units" value="1000">ug/L<br> <label for="nitrate">Nitrate:</label>
+  <input type="number" name="nitrate" step=0.00001 value="{{editedDrinkingWaterSample.nitrate }}"><input
+   type="radio" name="nitrate_units" value="1" checked>mg/L<input type="radio"
+   name="nitrate_units" value="1000">ug/L<br> <label for="nitrite">Nitrite:</label> <input
+   type="number" name="nitrite" step=0.00001 value="{{editedDrinkingWaterSample.nitrite }}"><input
+   type="radio" name="nitrite_units" value="1" checked>mg/L<input type="radio"
+   name="nitrite_units" value="1000">ug/L<br> <label for="aluminum">Aluminum:</label> <input
+   type="number" name="aluminum" step=0.00001 value="{{editedDrinkingWaterSample.aluminum }}"><input
+   type="radio" name="aluminum_units" value="1" checked>mg/L<input type="radio"
+   name="aluminum_units" value="1000">ug/L<br> <label for="barium">Barium:</label> <input
+   type="number" name="barium" step=0.00001 value="{{editedDrinkingWaterSample.barium }}"><input
+   type="radio" name="barium_units" value="1" checked>mg/L<input type="radio"
+   name="barium_units" value="1000">ug/L<br> <label for="boron">Boron:</label> <input
+   type="number" name="boron" step=0.00001 value="{{editedDrinkingWaterSample.boron }}"><input
+   type="radio" name="boron_units" value="1" checked>mg/L<input type="radio"
+   name="boron_units" value="1000">ug/L<br> <label for="cadmium">Cadmium:</label> <input
+   type="number" name="cadmium" step=0.00001 value="{{editedDrinkingWaterSample.cadmium }}"><input
+   type="radio" name="cadmium_units" value="1" checked>mg/L<input type="radio"
+   name="cadmium_units" value="1000">ug/L<br> <label for="chromium">Chromium:</label> <input
+   type="number" name="chromium" step=0.00001 value="{{editedDrinkingWaterSample.chromium }}"><input
+   type="radio" name="chromium_units" value="1" checked>mg/L<input type="radio"
+   name="chromium_units" value="1000">ug/L<br> <label for="chromium_vi">Chromium
+   VI:</label> <input type="number" name="chromium_vi" step=0.00001
+   value="{{editedDrinkingWaterSample.chromium_vi }}"><input type="radio"
+   name="chromium_iv_units" value="1" checked>mg/L<input type="radio"
+   name="chromium_iv_units" value="1000">ug/L<br> <label for="copper">Copper:</label> <input
+   type="number" name="copper" step=0.00001 value="{{editedDrinkingWaterSample.copper }}"><input
+   type="radio" name="copper_units" value="1" checked>mg/L<input type="radio"
+   name="copper_units" value="1000">ug/L<br> <label for="iron">Iron:</label> <input
+   type="number" name="iron" step=0.00001 value="{{editedDrinkingWaterSample.iron }}"><input
+   type="radio" name="iron_units" value="1" checked>mg/L<input type="radio"
+   name="iron_units" value="1000">ug/L<br> <label for="lead">Lead:</label> <input
+   type="number" name="lead" step=0.00001 value="{{editedDrinkingWaterSample.lead }}"><input
+   type="radio" name="lead_units" value="1" checked>mg/L<input type="radio"
+   name="lead_units" value="1000">ug/L<br> <label for="manganese">Manganese:</label> <input
+   type="number" name="manganese" step=0.00001 value="{{editedDrinkingWaterSample.manganese }}"><input
+   type="radio" name="manganese_units" value="1" checked>mg/L<input type="radio"
+   name="manganese_units" value="1000">ug/L<br> <label for="mercury">Mercury:</label> <input
+   type="number" name="mercury" step=0.00001 value="{{editedDrinkingWaterSample.mercury }}"><input
+   type="radio" name="mercury_units" value="1" checked>mg/L<input type="radio"
+   name="mercury_units" value="1000">ug/L<br> <label for="nickel">Nickel:</label> <input
+   type="number" name="nickel" step=0.00001 value="{{editedDrinkingWaterSample.nickel }}"><input
+   type="radio" name="nickel_units" value="1" checked>mg/L<input type="radio"
+   name="nickel_units" value="1000">ug/L<br> <label for="selenium">Selenium:</label> <input
+   type="number" name="selenium" step=0.00001 value="{{editedDrinkingWaterSample.selenium }}"><input
+   type="radio" name="selenium_units" value="1" checked>mg/L<input type="radio"
+   name="selenium_units" value="1000">ug/L<br> <label for="strontium">Strontium:</label>
+  <input type="number" name="strontium" step=0.00001
+   value="{{editedDrinkingWaterSample.strontium }}"><input type="radio"
+   name="strontium_units" value="1" checked>mg/L<input type="radio" name="strontium_units"
+   value="1000">ug/L<br> <label for="uranium">Uranium:</label> <input type="number"
+   name="uranium" step=0.00001 value="{{editedDrinkingWaterSample.uranium }}"><input
+   type="radio" name="uranium_units" value="1" checked>mg/L<input type="radio"
+   name="uranium_units" value="1000">ug/L<br> <label for="vanadium">Vanadium:</label> <input
+   type="number" name="vanadium" step=0.00001 value="{{editedDrinkingWaterSample.vanadium }}"><input
+   type="radio" name="vanadium_units" value="1" checked>mg/L<input type="radio"
+   name="vanadium_units" value="1000">ug/L<br> <label for="zinc">Zinc:</label> <input
+   type="number" name="zinc" step=0.00001 value="{{editedDrinkingWaterSample.zinc }}"><input
+   type="radio" name="zinc_units" value="1" checked>mg/L<input type="radio"
+   name="zinc_units" value="1000">ug/L<br> <label for="atrazine_metabolites">Atrazine
+   Metabolites:</label> <input type="number" name="atrazine_metabolites" step=0.00001
+   value="{{editedDrinkingWaterSample.atrazine_metabolites }}"><input type="radio"
+   name="atrazine_metabolites_units" value=".001">mg/L<input type="radio"
+   name="atrazine_metabolites_units" value="1" checked>ug/L<br> <label for="diazinon">Diazinon:</label>
+  <input type="number" name="diazinon" step=0.00001 value="{{editedDrinkingWaterSample.diazinon }}"><input
+   type="radio" name="diazinon_units" value=".001">mg/L<input type="radio"
+   name="diazinon_units" value="1" checked>ug/L<br> <label for="dicamba">Dicamba:</label>
+  <input type="number" name="dicamba" step=0.00001 value="{{editedDrinkingWaterSample.dicamba }}"><input
+   type="radio" name="dicamba_units" value=".001">mg/L<input type="radio"
+   name="dicamba_units" value="1" checked>ug/L<br> <label for="dichloromethane">Dichloromethane:</label>
+  <input type="number" name="dichloromethane" step=0.00001
+   value="{{editedDrinkingWaterSample.dichloromethane }}"><input type="radio"
+   name="dichloromethane_units" value=".001">mg/L<input type="radio"
+   name="dichloromethane_units" value="1" checked>ug/L<br> <label for="diclofop_methyl">Diclofop
+   Methyl:</label> <input type="number" name="diclofop_methyl" step=0.00001
+   value="{{editedDrinkingWaterSample.diclofop_methyl }}"><input type="radio"
+   name="diclofop_methyl_units" value=".001">mg/L<input type="radio"
+   name="diclofop_methyl_units" value="1" checked>ug/L<br> <label for="metolachlor">Metolachlor:</label>
+  <input type="number" name="metolachlor" step=0.00001
+   value="{{editedDrinkingWaterSample.metolachlor }}"><input type="radio"
+   name="metolachlor_units" value=".001">mg/L<input type="radio" name="metolachlor_units"
+   value="1" checked>ug/L<br> <label for="picloram">Picloram:</label> <input
+   type="number" name="picloram" step=0.00001 value="{{editedDrinkingWaterSample.picloram }}"><input
+   type="radio" name="picloram_units" value=".001">mg/L<input type="radio"
+   name="picloram_units" value="1" checked>ug/L<br> <label for="simazine">Simazine:</label>
+  <input type="number" name="simazine" step=0.00001 value="{{editedDrinkingWaterSample.simazine }}"><input
+   type="radio" name="simazine_units" value=".001">mg/L<input type="radio"
+   name="simazine_units" value="1" checked>ug/L<br> <label for="chloroform">Chloroform:</label>
+  <input type="number" name="chloroform" step=0.00001
+   value="{{editedDrinkingWaterSample.chloroform }}"><input type="radio"
+   name="chloroform_units" value=".001">mg/L<input type="radio" name="chloroform_units"
+   value="1" checked>ug/L<br> <label for="bromodichloromethane">Bromodichloromethane:</label>
+  <input type="number" name="bromodichloromethane" step=0.00001
+   value="{{editedDrinkingWaterSample.bromodichloromethane }}"><input type="radio"
+   name="bromodichloromethane_units" value=".001">mg/L<input type="radio"
+   name="bromodichloromethane_units" value="1" checked>ug/L<br> <label
+   for="dibromochloromethane">Dibromochloromethane:</label> <input type="number"
+   name="dibromochloromethane" step=0.00001
+   value="{{editedDrinkingWaterSample.dibromochloromethane }}"><input type="radio"
+   name="dibromochloromethane_units" value=".001">mg/L<input type="radio"
+   name="dibromochloromethane_units" value="1" checked>ug/L<br> <label
+   for="total_trihalomethanes">Total Trihalomethanes:</label> <input type="number"
+   name="total_trihalomethanes" step=0.00001
+   value="{{editedDrinkingWaterSample.total_trihalomethanes }}"><input type="radio"
+   name="total_trihalomethanes_units" value=".001">mg/L<input type="radio"
+   name="total_trihalomethanes_units" value="1" checked>ug/L<br> <label
+   for="dichloroacetic_acid">Dichloroacetic Acid:</label> <input type="number"
+   name="dichloroacetic_acid" step=0.00001
+   value="{{editedDrinkingWaterSample.dichloroacetic_acid }}"><input type="radio"
+   name="dichloroacetic_acid_units" value=".001">mg/L<input type="radio"
+   name="dichloroacetic_acid_units" value="1" checked>ug/L<br> <label
+   for="trichloroacetic_acid">Trichloroacetic Acid:</label> <input type="number"
+   name="trichloroacetic_acid" step=0.00001
+   value="{{editedDrinkingWaterSample.trichloroacetic_acid }}"><input type="radio"
+   name="trichloroacetic_acid_units" value=".001">mg/L<input type="radio"
+   name="trichloroacetic_acid_units" value="1" checked>ug/L<br> <label
+   for="bromochloroacetic_acid">Bromochloroacetic Acid:</label> <input type="number"
+   name="bromochloroacetic_acid" step=0.00001
+   value="{{editedDrinkingWaterSample.bromochloroacetic_acid }}"><input type="radio"
+   name="bromochloroacetic_acid_units" value=".001">mg/L<input type="radio"
+   name="bromochloroacetic_acid_units" value="1" checked>ug/L<br> <label
+   for="total_haloacetic_acids_haa5">Total Haloacetic Acids HAA5:</label> <input type="number"
+   name="total_haloacetic_acids_haa5" step=0.00001
+   value="{{editedDrinkingWaterSample.total_haloacetic_acids_haa5 }}"><input type="radio"
+   name="total_haloacetic_acids_haa5_units" value=".001">mg/L<input type="radio"
+   name="total_haloacetic_acids_haa5_units" value="1" checked>ug/L<br> <label
+   for="caffeine">Caffeine:</label> <input type="number" name="caffeine" step=0.00001
+   value="{{editedDrinkingWaterSample.caffeine }}"><input type="radio" name="caffeine_units"
+   value=".001">mg/L<input type="radio" name="caffeine_units" value="1" checked>ug/L<br>
+  <label for="metformin">Metformin:</label> <input type="number" name="metformin" step=0.00001
+   value="{{editedDrinkingWaterSample.metformin }}"><input type="radio"
+   name="metformin_units" value=".001">mg/L<input type="radio" name="metformin_units"
+   value="1" checked>ug/L<br> <label for="total_organic_carbon">Total Organic
+   Carbon:</label> <input type="number" name="total_organic_carbon" step=0.00001
+   value="{{editedDrinkingWaterSample.total_organic_carbon }}"><input type="radio"
+   name="total_organic_carbon_units" value=".001">mg/L<input type="radio"
+   name="total_organic_carbon_units" value="1" checked>ug/L<br> <label
+   for="grossalpha_radioactivity">Gross Alpha Radioactivity:</label> <input type="number"
+   name="grossalpha_radioactivity" step=0.00001
+   value="{{editedDrinkingWaterSample.grossalpha_radioactivity }}"><input type="radio"
+   name="grossalpha_radioactivity_units" value="1" checked>Bq/L<br> <label
+   for="grossbeta_radioactivity">Gross Beta Radioactivity:</label> <input type="number"
+   name="grossbeta_radioactivity" step=0.00001
+   value="{{editedDrinkingWaterSample.grossbeta_radioactivity }}"><input type="radio"
+   name="grossbeta_radioactivity_units" value="1" checked>Bq/L<br> <label for="tritium">Tritium:</label>
+  <input type="number" name="tritium" step=0.00001 value="{{editedDrinkingWaterSample.tritium }}"><input
+   type="radio" name="tritium_units" value=".001">mg/L<input type="radio"
+   name="tritium_units" value="1" checked>ug/L<br>
+
+
+  <button type="submit">Update</button>
+  <input type="button" onclick="location.href='/drinking_water_sample';" value="Cancel" />
+ </div>
+</form>
