@@ -1,5 +1,6 @@
 <h3>Environmental Health App</h3>
 <a href="/">Back</a>
+<a href="/newDrinkingWaterSample">New</a>
 <table>
  <thead>
   <tr>
@@ -133,6 +134,10 @@
    <td>{{ sample.grossalpha_radioactivity }}</td>
    <td>{{ sample.grossbeta_radioactivity }}</td>
    <td>{{ sample.tritium }}</td>
+   <td><a
+    href="{{url_for('editDrinkingWaterSample', drinking_water_sample_id = sample.drinking_water_sample_id )}}">Edit</a></td>
+   <td><a
+    href="{{url_for('deleteDrinkingWaterSample', drinking_water_sample_id = sample.drinking_water_sample_id )}}">Delete</a></td>
   </tr>
   {% endfor %}
  </tbody>
