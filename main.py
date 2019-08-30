@@ -300,5 +300,164 @@ def list_drinking_water_samples():
    return render_template('drinking_water_sample/show.html', drinking_water_samples=drinking_water_sample.query.all())
 
 
+@app.route('/newDrinkingWaterSample', methods=['GET', 'POST'])
+def newDrinkingWaterSample():
+    if request.method == 'POST':
+        newDrinkingWaterSample = drinking_water_sample()
+        setDrinkingWaterSample(newDrinkingWaterSample, request)
+        db.session.add(newDrinkingWaterSample)
+        db.session.commit()
+        return redirect(url_for('list_drinking_water_samples'))
+    else:
+        return render_template('drinking_water_sample/new.html', site=site.query.all())
+
+
+def setDrinkingWaterSample(editedDrinkingWaterSample, request):
+    editedDrinkingWaterSample.site_id = request.form['site_id']
+    editedDrinkingWaterSample.date = request.form['date']
+    editedDrinkingWaterSample.population = request.form['population']
+    if request.form['total_coliforms'] != "":
+        editedDrinkingWaterSample.total_coliforms = float(request.form['total_coliforms']) * float(request.form['total_coliforms_units'])
+    if request.form['e_coli'] != "":
+        editedDrinkingWaterSample.e_coli = float(request.form['e_coli']) * float(request.form['e_coli_units'])
+    if request.form['heterotrophic_plate_count'] != "":
+        editedDrinkingWaterSample.heterotrophic_plate_count = float(request.form['heterotrophic_plate_count']) * float(request.form['heterotrophic_plate_count_units'])
+    if request.form['ph'] != "":
+        editedDrinkingWaterSample.ph = float(request.form['ph']) * float(request.form['ph_units'])
+    if request.form['alkalinity'] != "":
+        editedDrinkingWaterSample.alkalinity = float(request.form['alkalinity']) * float(request.form['alkalinity_units'])
+    if request.form['bromide'] != "":
+        editedDrinkingWaterSample.bromide = float(request.form['bromide']) * float(request.form['bromide_units'])
+    if request.form['calcium'] != "":
+        editedDrinkingWaterSample.calcium = float(request.form['calcium']) * float(request.form['calcium_units'])
+    if request.form['chlorate'] != "":
+        editedDrinkingWaterSample.chlorate = float(request.form['chlorate']) * float(request.form['chlorate_units'])
+    if request.form['chloride'] != "":
+        editedDrinkingWaterSample.chloride = float(request.form['chloride']) * float(request.form['chloride_units'])
+    if request.form['chlorine'] != "":
+        editedDrinkingWaterSample.chlorine = float(request.form['chlorine']) * float(request.form['chlorine_units'])
+    if request.form['fluoride'] != "":
+        editedDrinkingWaterSample.fluoride = float(request.form['fluoride']) * float(request.form['fluoride_units'])
+    if request.form['magnesium'] != "":
+        editedDrinkingWaterSample.magnesium = float(request.form['magnesium']) * float(request.form['magnesium_units'])
+    if request.form['potassium'] != "":
+        editedDrinkingWaterSample.potassium = float(request.form['potassium']) * float(request.form['potassium_units'])
+    if request.form['silicon'] != "":
+        editedDrinkingWaterSample.silicon = float(request.form['silicon']) * float(request.form['silicon_units'])
+    if request.form['sodium'] != "":
+        editedDrinkingWaterSample.sodium = float(request.form['sodium']) * float(request.form['sodium_units'])
+    if request.form['sulphate'] != "":
+        editedDrinkingWaterSample.sulphate = float(request.form['sulphate']) * float(request.form['sulphate_units'])
+    if request.form['calcium_hardness'] != "":
+        editedDrinkingWaterSample.calcium_hardness = float(request.form['calcium_hardness']) * float(request.form['calcium_hardness_units'])
+    if request.form['nitrate'] != "":
+        editedDrinkingWaterSample.nitrate = float(request.form['nitrate']) * float(request.form['nitrate_units'])
+    if request.form['nitrite'] != "":
+        editedDrinkingWaterSample.nitrite = float(request.form['nitrite']) * float(request.form['nitrite_units'])
+    if request.form['aluminum'] != "":
+        editedDrinkingWaterSample.aluminum = float(request.form['aluminum']) * float(request.form['aluminum_units'])
+    if request.form['barium'] != "":
+        editedDrinkingWaterSample.barium = float(request.form['barium']) * float(request.form['barium_units'])
+    if request.form['boron'] != "":
+        editedDrinkingWaterSample.boron = float(request.form['boron']) * float(request.form['boron_units'])
+    if request.form['cadmium'] != "":
+        editedDrinkingWaterSample.cadmium = float(request.form['cadmium']) * float(request.form['cadmium_units'])
+    if request.form['chromium'] != "":
+        editedDrinkingWaterSample.chromium = float(request.form['chromium']) * float(request.form['chromium_units'])
+    if request.form['chromium_vi'] != "":
+        editedDrinkingWaterSample.chromium_vi = float(request.form['chromium_vi']) * float(request.form['chromium_vi_units'])
+    if request.form['copper'] != "":
+        editedDrinkingWaterSample.copper = float(request.form['copper']) * float(request.form['copper_units'])
+    if request.form['iron'] != "":
+        editedDrinkingWaterSample.iron = float(request.form['iron']) * float(request.form['iron_units'])
+    if request.form['lead'] != "":
+        editedDrinkingWaterSample.lead = float(request.form['lead']) * float(request.form['lead_units'])
+    if request.form['manganese'] != "":
+        editedDrinkingWaterSample.manganese = float(request.form['manganese']) * float(request.form['manganese_units'])
+    if request.form['mercury'] != "":
+        editedDrinkingWaterSample.mercury = float(request.form['mercury']) * float(request.form['mercury_units'])
+    if request.form['nickel'] != "":
+        editedDrinkingWaterSample.nickel = float(request.form['nickel']) * float(request.form['nickel_units'])
+    if request.form['selenium'] != "":
+        editedDrinkingWaterSample.selenium = float(request.form['selenium']) * float(request.form['selenium_units'])
+    if request.form['strontium'] != "":
+        editedDrinkingWaterSample.strontium = float(request.form['strontium']) * float(request.form['strontium_units'])
+    if request.form['uranium'] != "":
+        editedDrinkingWaterSample.uranium = float(request.form['uranium']) * float(request.form['uranium_units'])
+    if request.form['vanadium'] != "":
+        editedDrinkingWaterSample.vanadium = float(request.form['vanadium']) * float(request.form['vanadium_units'])
+    if request.form['zinc'] != "":
+        editedDrinkingWaterSample.zinc = float(request.form['zinc']) * float(request.form['zinc_units'])
+    if request.form['atrazine_metabolites'] != "":
+        editedDrinkingWaterSample.atrazine_metabolites = float(request.form['atrazine_metabolites']) * float(request.form['atrazine_metabolites_units'])
+    if request.form['diazinon'] != "":
+        editedDrinkingWaterSample.diazinon = float(request.form['diazinon']) * float(request.form['diazinon_units'])
+    if request.form['dicamba'] != "":
+        editedDrinkingWaterSample.dicamba = float(request.form['dicamba']) * float(request.form['dicamba_units'])
+    if request.form['dichloromethane'] != "":
+        editedDrinkingWaterSample.dichloromethane = float(request.form['dichloromethane']) * float(request.form['dichloromethane_units'])
+    if request.form['diclofop_methyl'] != "":
+        editedDrinkingWaterSample.diclofop_methyl = float(request.form['diclofop_methyl']) * float(request.form['diclofop_methyl_units'])
+    if request.form['metolachlor'] != "":
+        editedDrinkingWaterSample.metolachlor = float(request.form['metolachlor']) * float(request.form['metolachlor_units'])
+    if request.form['picloram'] != "":
+        editedDrinkingWaterSample.picloram = float(request.form['picloram']) * float(request.form['picloram_units'])
+    if request.form['simazine'] != "":
+        editedDrinkingWaterSample.simazine = float(request.form['simazine']) * float(request.form['simazine_units'])
+    if request.form['chloroform'] != "":
+        editedDrinkingWaterSample.chloroform = float(request.form['chloroform']) * float(request.form['chloroform_units'])
+    if request.form['bromodichloromethane'] != "":
+        editedDrinkingWaterSample.bromodichloromethane = float(request.form['bromodichloromethane']) * float(request.form['bromodichloromethane_units'])
+    if request.form['dibromochloromethane'] != "":
+        editedDrinkingWaterSample.dibromochloromethane = float(request.form['dibromochloromethane']) * float(request.form['dibromochloromethane_units'])
+    if request.form['total_trihalomethanes'] != "":
+        editedDrinkingWaterSample.total_trihalomethanes = float(request.form['total_trihalomethanes']) * float(request.form['total_trihalomethanes_units'])
+    if request.form['dichloroacetic_acid'] != "":
+        editedDrinkingWaterSample.dichloroacetic_acid = float(request.form['dichloroacetic_acid']) * float(request.form['dichloroacetic_acid_units'])
+    if request.form['trichloroacetic_acid'] != "":
+        editedDrinkingWaterSample.trichloroacetic_acid = float(request.form['trichloroacetic_acid']) * float(request.form['trichloroacetic_acid_units'])
+    if request.form['bromochloroacetic_acid'] != "":
+        editedDrinkingWaterSample.bromochloroacetic_acid = float(request.form['bromochloroacetic_acid']) * float(request.form['bromochloroacetic_acid_units'])
+    if request.form['total_haloacetic_acids_haa5'] != "":
+        editedDrinkingWaterSample.total_haloacetic_acids_haa5 = float(request.form['total_haloacetic_acids_haa5']) * float(request.form['total_haloacetic_acids_haa5_units'])
+    if request.form['caffeine'] != "":
+        editedDrinkingWaterSample.caffeine = float(request.form['caffeine']) * float(request.form['caffeine_units'])
+    if request.form['metformin'] != "":
+        editedDrinkingWaterSample.metformin = float(request.form['metformin']) * float(request.form['metformin_units'])
+    if request.form['total_organic_carbon'] != "":
+        editedDrinkingWaterSample.total_organic_carbon = float(request.form['total_organic_carbon']) * float(request.form['total_organic_carbon_units'])
+    if request.form['grossalpha_radioactivity'] != "":
+        editedDrinkingWaterSample.grossalpha_radioactivity = float(request.form['grossalpha_radioactivity']) * float(request.form['grossalpha_radioactivity_units'])
+    if request.form['grossbeta_radioactivity'] != "":
+        editedDrinkingWaterSample.grossbeta_radioactivity = float(request.form['grossbeta_radioactivity']) * float(request.form['grossbeta_radioactivity_units'])
+    if request.form['tritium'] != "":
+        editedDrinkingWaterSample.tritium = float(request.form['tritium']) * float(request.form['tritium_units'])
+
+
+@app.route('/<int:drinking_water_sample_id>/editDrinkingWaterSample', methods=['GET', 'POST'])
+def editDrinkingWaterSample(drinking_water_sample_id):
+    editedDrinkingWaterSample = db.session.query(drinking_water_sample).filter_by(drinking_water_sample_id=drinking_water_sample_id).one()
+    if request.method == 'POST':
+        if request.form['site_id']:
+            setDrinkingWaterSample(editedDrinkingWaterSample, request)
+            
+            db.session.add(editedDrinkingWaterSample)
+            db.session.commit()
+            return redirect(url_for('list_drinking_water_samples'))
+    else:
+        return render_template('drinking_water_sample/edit.html', editedDrinkingWaterSample=editedDrinkingWaterSample, site=site.query.all())
+
+        
+@app.route('/<int:drinking_water_sample_id>/deleteDrinkingWaterSample', methods=['GET', 'POST'])
+def deleteDrinkingWaterSample(drinking_water_sample_id):
+    drinkingWaterSampleToDelete = db.session.query(drinking_water_sample).filter_by(drinking_water_sample_id=drinking_water_sample_id).one()
+    if request.method == 'POST':
+        db.session.delete(drinkingWaterSampleToDelete)
+        db.session.commit()
+        return redirect(url_for('list_drinking_water_samples'))
+    else:
+        return render_template('drinking_water_sample/delete.html', drinkingWaterSampleToDelete=drinkingWaterSampleToDelete)
+
+
 if __name__ == "__main__":
     app.run(debug=True, port=5001, host='0.0.0.0')
