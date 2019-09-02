@@ -1,11 +1,12 @@
 <h3>Environmental Health App</h3>
 
-<form action="{{ url_for('deleteSite', site_id = site.site_id)}}"
+<form
+ action="{{ url_for('deleteDrinkingWaterSample', drinking_water_sample_id = drinkingWaterSampleToDelete.drinking_water_sample_id)}}"
  method="post">
  <div class="form-group">
-  <label for="name">Are you sure you want to delete "{{site.name
-   }}"?</label>
+  <label for="name">Are you sure you want to delete "{{drinkingWaterSampleToDelete.site.name
+   }}" on "{{drinkingWaterSampleToDelete.date}}"?</label>
   <button type="submit">Delete</button>
-  <a href='{{url_for('list_sites')}}'> Cancel </a>
+  <input type="button" onclick="location.href='/drinking_water_sample';" value="Cancel" />
  </div>
 </form>
