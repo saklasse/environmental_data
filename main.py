@@ -35,6 +35,11 @@ class site(db.Model):
     site_type = db.relationship('site_type', backref=db.backref('site', lazy=True))
 
 
+ms_rate_drinking_water_sample = db.Table('ms_rate_drinking_water_sample', db.Model.metadata,
+    db.Column('ms_rate_sample_id', db.Integer, db.ForeignKey('ms_rate_sample.ms_rate_sample_id'), primary_key=True),
+    db.Column('drinking_water_sample_id', db.Integer, db.ForeignKey('drinking_water_sample.drinking_water_sample_id'), primary_key=True))
+
+
 # The ms rate sample table
 class ms_rate_sample(db.Model):
     ms_rate_sample_id = db.Column(db.Integer, primary_key=True)
@@ -43,6 +48,8 @@ class ms_rate_sample(db.Model):
     rate = db.Column(db.Integer)
     
     site = db.relationship('site', backref=db.backref('ms_rate_sample', lazy=True))
+    drinking_water_samples = db.relationship("drinking_water_sample",
+                               secondary=ms_rate_drinking_water_sample)
 
 
 # The drinking water sample table
@@ -111,6 +118,8 @@ class drinking_water_sample(db.Model):
     tritium = db.Column(db.FLOAT)
     
     site = db.relationship('site', backref=db.backref('drinking_water_sample', lazy=True))
+    ms_rate_samples = db.relationship("ms_rate_sample",
+                               secondary=ms_rate_drinking_water_sample)
 
 
 def __init__(self, title, body):
@@ -432,6 +441,11 @@ def setDrinkingWaterSample(editedDrinkingWaterSample, request):
         editedDrinkingWaterSample.grossbeta_radioactivity = float(request.form['grossbeta_radioactivity']) * float(request.form['grossbeta_radioactivity_units'])
     if request.form['tritium'] != "":
         editedDrinkingWaterSample.tritium = float(request.form['tritium']) * float(request.form['tritium_units'])
+    if request.form['ms_rate_sample'] != "NONE":
+        editedDrinkingWaterSample.ms_rate_samples.clear()
+        editedDrinkingWaterSample.ms_rate_samples.append(db.session.query(ms_rate_sample).filter_by(site_id=request.form['ms_rate_sample']).first())
+    else:
+        editedDrinkingWaterSample.ms_rate_samples.clear()
 
 
 @app.route('/<int:drinking_water_sample_id>/editDrinkingWaterSample', methods=['GET', 'POST'])

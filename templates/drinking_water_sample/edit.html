@@ -220,8 +220,16 @@ label {
    name="grossbeta_radioactivity_units" value="1" checked>Bq/L<br> <label for="tritium">Tritium:</label>
   <input type="number" name="tritium" step=0.00001 value="{{editedDrinkingWaterSample.tritium }}"><input
    type="radio" name="tritium_units" value=".001">mg/L<input type="radio"
-   name="tritium_units" value="1" checked>ug/L<br>
-
+   name="tritium_units" value="1" checked>ug/L<br> <label for="ms_rate_sample">MS
+   Rate Site:</label> <select name="ms_rate_sample" width="300px">
+   <option value="NONE" SELECTED>NONE</option> {% for s in site %} {% if
+   editedDrinkingWaterSample.ms_rate_samples|length > 0 and s.site_id ==
+   editedDrinkingWaterSample.ms_rate_samples[0].site.site_id %}
+   <option value="{{ s.site_id }}" SELECTED>{{ s.name }} - {{ s.site_type.name }}</option> {% else
+   %}
+   <option value="{{ s.site_id }}">{{ s.name }} - {{ s.site_type.name }}</option> {% endif %} {%
+   endfor %}
+  </select><br>
 
   <button type="submit">Update</button>
   <input type="button" onclick="location.href='/drinking_water_sample';" value="Cancel" />

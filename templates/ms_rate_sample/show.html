@@ -8,6 +8,7 @@
    <th>Site ID</th>
    <th>Date</th>
    <th>rate</th>
+   <th>Drinking Water Samples</th>
   </tr>
  </thead>
 
@@ -18,6 +19,7 @@
    <td>{{ ms_rate.site.name }}</td>
    <td>{{ ms_rate.date }}</td>
    <td>{{ ms_rate.rate }}</td>
+   <td>{% for sample in ms_rate.drinking_water_samples %} {{sample.site.name}} {% endfor %}</td>
    <td><a
     href="{{url_for('editMsRateSample', ms_rate_sample_id = ms_rate.ms_rate_sample_id )}}">Edit</a></td>
    <td><a
