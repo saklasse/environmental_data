@@ -12,7 +12,7 @@
    <th>longitude</th>
   </tr>
  </thead>
-
+ {% set location=[] %}
  <tbody>
   {% for site in sites %}
   <tr>
@@ -25,6 +25,9 @@
    <td><a href="{{url_for('editSite', site_id = site.site_id )}}">Edit</a></td>
    <td><a href="{{url_for('deleteSite', site_id = site.site_id )}}">Delete</a></td>
   </tr>
-  {% endfor %}
+  {% set location = location.append((site.latitude, site.longitude)) %} {% endfor %}
  </tbody>
 </table>
+
+{% set style="width:500px;height:500px;"%} {{ googlemap( "simple-map", location[0].0, location[0].1,
+markers=location, style=style ) }}

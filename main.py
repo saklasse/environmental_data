@@ -2,8 +2,10 @@ from flask import Flask, render_template, redirect, request, url_for
 from flask_sqlalchemy import SQLAlchemy
 import os
 import secrets
+from flask_googlemaps import GoogleMaps
 
 app = Flask(__name__)
+GoogleMaps(app)
 
 basedir = os.path.abspath(os.path.dirname(__file__))
 app.config['SQLALCHEMY_DATABASE_URI'] = secrets.DB_CONNECTION_STRING
@@ -28,8 +30,8 @@ class site(db.Model):
     country_id = db.Column(db.Integer, db.ForeignKey('country.country_id'))
     site_type_id = db.Column(db.Integer, db.ForeignKey('site_type.site_type_id'))
     name = db.Column(db.String(45))
-    latitude = db.Column(db.Integer)
-    longitude = db.Column(db.Integer)
+    latitude = db.Column(db.Float)
+    longitude = db.Column(db.Float)
 
     country = db.relationship('country', backref=db.backref('site', lazy=True))    
     site_type = db.relationship('site_type', backref=db.backref('site', lazy=True))
