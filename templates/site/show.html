@@ -25,7 +25,19 @@
    <td><a href="{{url_for('editSite', site_id = site.site_id )}}">Edit</a></td>
    <td><a href="{{url_for('deleteSite', site_id = site.site_id )}}">Delete</a></td>
   </tr>
-  {% set location = location.append((site.latitude, site.longitude)) %} {% endfor %}
+  {% if site.site_type.site_type_id == 4 %} {% set location = location.append((site.latitude,
+  site.longitude, site.name + ' - ' + site.site_type.name,
+  'http://maps.google.com/mapfiles/ms/icons/red-dot.png' )) %} {% elif site.site_type.site_type_id
+  == 3 %} {% set location = location.append((site.latitude, site.longitude, site.name + ' - ' +
+  site.site_type.name, 'http://maps.google.com/mapfiles/ms/icons/blue-dot.png' )) %} {% elif
+  site.site_type.site_type_id == 2 %} {% set location = location.append((site.latitude,
+  site.longitude, site.name + ' - ' + site.site_type.name,
+  'http://maps.google.com/mapfiles/ms/icons/yellow-dot.png' )) %} {% elif
+  site.site_type.site_type_id == 1 %} {% set location = location.append((site.latitude,
+  site.longitude, site.name + ' - ' + site.site_type.name,
+  'http://maps.google.com/mapfiles/ms/icons/green-dot.png' )) %} {% else %} {% set location =
+  location.append((site.latitude, site.longitude, site.name + ' - ' + site.site_type.name,
+  'http://maps.google.com/mapfiles/ms/icons/purple-dot.png' )) %} {% endif %} {% endfor %}
  </tbody>
 </table>
 
