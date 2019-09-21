@@ -1,12 +1,12 @@
 <h3>Environmental Health App</h3>
 
 <form
- action="{{ url_for('deleteCountry', country_id = country.country_id)}}"
+ action="{{ url_for('main.deleteCountry', country_id = country.country_id)}}"
  method="post">
  <div class="form-group">
   <label for="name">Are you sure you want to delete
    "{{country.name }}"?</label>
   <button type="submit">Delete</button>
-  <a href='{{url_for('list_countries')}}'> Cancel </a>
+  <a href='{{url_for('main.list_countries')}}'> Cancel </a>
  </div>
 </form>

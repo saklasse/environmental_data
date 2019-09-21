@@ -7,7 +7,7 @@ label {
 </style>
 <h3>Environmental Health App</h3>
 
-<form action="{{ url_for('editSite', site_id = site.site_id)}}" method="post">
+<form action="{{ url_for('main.editSite', site_id = site.site_id)}}" method="post">
  <div class="form-group">
   <label for="country_id">Country:</label> <select name="country_id" width="300px"> {% for
    s in country %} {% if s.country_id == site.country_id %}
