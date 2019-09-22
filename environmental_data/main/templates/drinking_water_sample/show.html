@@ -137,9 +137,9 @@
    <td>{{ sample.tritium }}</td>
    <td>{% for ms_rate in sample.ms_rate_samples %} {{ms_rate.site.name}} {% endfor %}</td>
    <td><a
-    href="{{url_for('editDrinkingWaterSample', drinking_water_sample_id = sample.drinking_water_sample_id )}}">Edit</a></td>
+    href="{{url_for('main.editDrinkingWaterSample', drinking_water_sample_id = sample.drinking_water_sample_id )}}">Edit</a></td>
    <td><a
-    href="{{url_for('deleteDrinkingWaterSample', drinking_water_sample_id = sample.drinking_water_sample_id )}}">Delete</a></td>
+    href="{{url_for('main.deleteDrinkingWaterSample', drinking_water_sample_id = sample.drinking_water_sample_id )}}">Delete</a></td>
   </tr>
   {% endfor %}
  </tbody>

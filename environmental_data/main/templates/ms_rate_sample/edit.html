@@ -8,7 +8,7 @@ label {
 <h3>Environmental Health App</h3>
 
 <form
- action="{{ url_for('editMsRateSample', ms_rate_sample_id = editedMsRateSample.ms_rate_sample_id)}}"
+ action="{{ url_for('main.editMsRateSample', ms_rate_sample_id = editedMsRateSample.ms_rate_sample_id)}}"
  method="post">
  <div class="form-group">
   <label for="site_id">Site ID:</label> <select name="site_id" width="300px"> {% for s in

@@ -1,6 +1,6 @@
 <h3>Environmental Health App</h3>
 
-<form action="{{ url_for('deleteSite', site_id = site.site_id)}}"
+<form action="{{ url_for('main.deleteSite', site_id = site.site_id)}}"
  method="post">
  <div class="form-group">
   <label for="name">Are you sure you want to delete "{{site.name

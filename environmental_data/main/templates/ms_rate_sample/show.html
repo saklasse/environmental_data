@@ -21,9 +21,9 @@
    <td>{{ ms_rate.rate }}</td>
    <td>{% for sample in ms_rate.drinking_water_samples %} {{sample.site.name}} {% endfor %}</td>
    <td><a
-    href="{{url_for('editMsRateSample', ms_rate_sample_id = ms_rate.ms_rate_sample_id )}}">Edit</a></td>
+    href="{{url_for('main.editMsRateSample', ms_rate_sample_id = ms_rate.ms_rate_sample_id )}}">Edit</a></td>
    <td><a
-    href="{{url_for('deleteMsRateSample', ms_rate_sample_id = ms_rate.ms_rate_sample_id )}}">Delete</a></td>
+    href="{{url_for('main.deleteMsRateSample', ms_rate_sample_id = ms_rate.ms_rate_sample_id )}}">Delete</a></td>
   </tr>
   {% endfor %}
  </tbody>
