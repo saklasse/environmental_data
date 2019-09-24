@@ -1,1 +1,9 @@
 secrets.py
+.project
+.pydevproject
+__pycache__/
+environmental_data/__pycache__/
+environmental_data/main/__pycache__/
+environmental_data/main/database/__pycache__/
+environmental_data/translations/en/LC_MESSAGES/messages.mo
+environmental_data/translations/nb_NO/LC_MESSAGES/messages.mo

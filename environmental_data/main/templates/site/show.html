@@ -23,7 +23,7 @@
    <td>{{ site.latitude }}</td>
    <td>{{ site.longitude }}</td>
    <td><a href="{{url_for('main.editSite', site_id = site.site_id )}}">Edit</a></td>
-   <td><a href="{{url_for('main.deleteSite', site_id = site.site_id )}}">Delete</a></td>
+   <td><a href="{{url_for('main.deleteSite', site_id = site.site_id )}}">{{ _('Delete') }}</a></td>
   </tr>
   {% if site.site_type.site_type_id == 4 %} {% set location = location.append((site.latitude,
   site.longitude, site.name + ' - ' + site.site_type.name,

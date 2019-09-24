@@ -20,7 +20,7 @@
    <td><a
     href="{{url_for('main.editCountry', country_id = country.country_id )}}">Edit</a></td>
    <td><a
-    href="{{url_for('main.deleteCountry', country_id = country.country_id )}}">Delete</a></td>
+    href="{{url_for('main.deleteCountry', country_id = country.country_id )}}">{{ _('Delete') }}</a></td>
   </tr>
   {% endfor %}
  </tbody>

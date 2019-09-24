@@ -139,7 +139,7 @@
    <td><a
     href="{{url_for('main.editDrinkingWaterSample', drinking_water_sample_id = sample.drinking_water_sample_id )}}">Edit</a></td>
    <td><a
-    href="{{url_for('main.deleteDrinkingWaterSample', drinking_water_sample_id = sample.drinking_water_sample_id )}}">Delete</a></td>
+    href="{{url_for('main.deleteDrinkingWaterSample', drinking_water_sample_id = sample.drinking_water_sample_id )}}">{{ _('Delete') }}</a></td>
   </tr>
   {% endfor %}
  </tbody>

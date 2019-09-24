@@ -1,6 +1,8 @@
-from flask import Blueprint, render_template, request, redirect, url_for
+from flask import Blueprint, render_template, request, redirect, url_for, current_app
 from flask_sqlalchemy import SQLAlchemy
+from flask_babel import lazy_gettext
 from environmental_data.main.database.database import country, drinking_water_sample, ms_rate_sample, ms_rate_drinking_water_sample, site_type, site
+import flask_babel
 
 main = Blueprint('main', __name__, template_folder='templates')
 
@@ -14,7 +16,7 @@ def index():
 
 @main.route('/country', methods=['GET'])
 def list_countries():
-   return render_template('country/show.html', countries=country.query.all())
+    return render_template('country/show.html', countries=country.query.all())
 
 
 @main.route('/newCountry', methods=['GET', 'POST'])

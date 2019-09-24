@@ -23,7 +23,7 @@
    <td><a
     href="{{url_for('main.editMsRateSample', ms_rate_sample_id = ms_rate.ms_rate_sample_id )}}">Edit</a></td>
    <td><a
-    href="{{url_for('main.deleteMsRateSample', ms_rate_sample_id = ms_rate.ms_rate_sample_id )}}">Delete</a></td>
+    href="{{url_for('main.deleteMsRateSample', ms_rate_sample_id = ms_rate.ms_rate_sample_id )}}">{{ _('Delete') }}</a></td>
   </tr>
   {% endfor %}
  </tbody>

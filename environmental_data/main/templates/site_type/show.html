@@ -17,7 +17,7 @@
    <td><a
     href="{{url_for('main.editSiteType', site_type_id = site_type.site_type_id )}}">Edit</a></td>
    <td><a
-    href="{{url_for('main.deleteSiteType', site_type_id = site_type.site_type_id )}}">Delete</a></td>
+    href="{{url_for('main.deleteSiteType', site_type_id = site_type.site_type_id )}}">{{ _('Delete') }}</a></td>
   </tr>
   </tr>
   {% endfor %}
