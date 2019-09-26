@@ -5,17 +5,19 @@ label {
 	float: left;
 }
 </style>
-<h3>Environmental Health App</h3>
+<h3>{{_('Environmental Health App')}}</h3>
 
 <form action="#" method="post">
  <div class="form-group">
-  <label for="site_id">Site:</label> <select name="site_id" width="300px"> {% for s in site
-   %}
+  <label for="site_id">{{_('Site')}}:</label> <select name="site_id" width="300px"> {% for
+   s in site %}
    <option value="{{ s.site_id }}" SELECTED>{{ s.name }}</option> {% endfor %}
-  </select><br> <label for="date">Date:</label> <input type="text" maxlength="100" name="date"><br>
-  <label for="rate">Rate (per 100000):</label> <input type="text" maxlength="100" name="rate"><br>
+  </select><br> <label for="date">{{_('Date')}}):</label> <input type="text" maxlength="100" name="date"><br>
+  <label for="rate">{{_('Rate (per 100000)')}}:</label> <input type="text" maxlength="100"
+   name="rate"><br>
 
-  <button type="submit">Create</button>
-  <input type="button" onclick="location.href='/ms_sample_rate';" value="Cancel" />
+  <button type="submit">{{_('Create')}}</button>
+  <input type="button" onclick="location.href='{{url_for('main.list_ms_rate_samples')}}'"
+   value="{{_('Cancel')}}" />
  </div>
 </form>

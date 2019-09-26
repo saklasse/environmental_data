@@ -1,12 +1,11 @@
-<h3>Environmental Health App</h3>
+<h3>{{_('Environmental Health App')}}</h3>
 
-<form
- action="{{ url_for('main.deleteSiteType', site_type_id = site_type.site_type_id)}}"
+<form action="{{ url_for('main.deleteSiteType', site_type_id = site_type.site_type_id)}}"
  method="post">
  <div class="form-group">
-  <label for="name">Are you sure you want to delete
-   "{{site_type.name }}"?</label>
-  <button type="submit">Delete</button>
-  <a href='{{url_for('main.list_sites_types')}}'> Cancel </a>
+  <label for="name">{{_('Are you sure you want to delete')}} "{{site_type.name }}"?</label>
+  <button type="submit">{{_('Delete')}}</button>
+  <input type="button" onclick="location.href='{{url_for('main.list_sites_types')}}'"
+   value="{{_('Cancel')}}" />
  </div>
 </form>

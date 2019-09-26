@@ -1,15 +1,15 @@
-<h3>Environmental Health App</h3>
-<a href="/">Back</a>
-<a href="/newSite">New</a>
+<h3>{{_('Environmental Health App')}}</h3>
+<a href="{{url_for('main.index')}}">{{_('Back')}}</a>
+<a href="{{url_for('main.newSite')}}">{{_('New')}}</a>
 <table>
  <thead>
   <tr>
-   <th>ID</th>
-   <th>Country ID</th>
-   <th>Site Type ID</th>
-   <th>Name</th>
-   <th>latitude</th>
-   <th>longitude</th>
+   <th>{{_('ID')}}</th>
+   <th>{{_('Country ID')}}</th>
+   <th>{{_('Site Type ID')}}</th>
+   <th>{{_('Name')}}</th>
+   <th>{{_('Latitude')}}</th>
+   <th>{{_('Longitude')}}</th>
   </tr>
  </thead>
  {% set location=[] %}
@@ -22,7 +22,7 @@
    <td>{{ site.name }}</td>
    <td>{{ site.latitude }}</td>
    <td>{{ site.longitude }}</td>
-   <td><a href="{{url_for('main.editSite', site_id = site.site_id )}}">Edit</a></td>
+   <td><a href="{{url_for('main.editSite', site_id = site.site_id )}}">{{_('Edit')}}</a></td>
    <td><a href="{{url_for('main.deleteSite', site_id = site.site_id )}}">{{ _('Delete') }}</a></td>
   </tr>
   {% if site.site_type.site_type_id == 4 %} {% set location = location.append((site.latitude,

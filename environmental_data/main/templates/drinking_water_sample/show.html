@@ -1,72 +1,72 @@
 <h3>Environmental Health App</h3>
-<a href="/">Back</a>
-<a href="/newDrinkingWaterSample">New</a>
+<a href="{{url_for('main.index')}}">{{_('Back')}}</a>
+<a href="{{url_for('main.newDrinkingWaterSample')}}">{{_('New')}}</a>
 <table>
  <thead>
   <tr>
-   <th>drinking_water_sample_id</th>
-   <th>site_id</th>
-   <th>date</th>
-   <th>population</th>
-   <th>total_coliforms</th>
-   <th>e_coli</th>
-   <th>heterotrophic_plate_count</th>
-   <th>ph</th>
-   <th>alkalinity</th>
-   <th>bromide</th>
-   <th>calcium</th>
-   <th>chlorate</th>
-   <th>chloride</th>
-   <th>chlorine</th>
-   <th>fluoride</th>
-   <th>magnesium</th>
-   <th>potassium</th>
-   <th>silicon</th>
-   <th>sodium</th>
-   <th>sulphate</th>
-   <th>calcium_hardness</th>
-   <th>nitrate</th>
-   <th>nitrite</th>
-   <th>aluminum</th>
-   <th>barium</th>
-   <th>boron</th>
-   <th>cadmium</th>
-   <th>chromium</th>
-   <th>chromium_vi</th>
-   <th>copper</th>
-   <th>iron</th>
-   <th>lead</th>
-   <th>manganese</th>
-   <th>mercury</th>
-   <th>nickel</th>
-   <th>selenium</th>
-   <th>strontium</th>
-   <th>uranium</th>
-   <th>vanadium</th>
-   <th>zinc</th>
-   <th>atrazine_metabolites</th>
-   <th>diazinon</th>
-   <th>dicamba</th>
-   <th>dichloromethane</th>
-   <th>diclofop_methyl</th>
-   <th>metolachlor</th>
-   <th>picloram</th>
-   <th>simazine</th>
-   <th>chloroform</th>
-   <th>bromodichloromethane</th>
-   <th>dibromochloromethane</th>
-   <th>total_trihalomethanes</th>
-   <th>dichloroacetic_acid</th>
-   <th>trichloroacetic_acid</th>
-   <th>bromochloroacetic_acid</th>
-   <th>total_haloacetic_acids_haa5</th>
-   <th>caffeine</th>
-   <th>metformin</th>
-   <th>total_organic_carbon</th>
-   <th>grossalpha_radioactivity</th>
-   <th>grossbeta_radioactivity</th>
-   <th>tritium</th>
-   <th>ms rate sample</th>
+   <th>{{_('Drinking Water Sample ID')}}</th>
+   <th>{{_('Site ID')}}</th>
+   <th>{{_('Date')}}</th>
+   <th>{{_('Population')}}</th>
+   <th>{{_('Total Coliforms')}}</th>
+   <th>{{_('E. Coli')}}</th>
+   <th>{{_('Heterotrophic Plate Count')}}</th>
+   <th>{{_('PH')}}</th>
+   <th>{{_('Alkalinity')}}</th>
+   <th>{{_('Bromide')}}</th>
+   <th>{{_('Calcium')}}</th>
+   <th>{{_('Chlorate')}}</th>
+   <th>{{_('Chloride')}}</th>
+   <th>{{_('Chlorine')}}</th>
+   <th>{{_('Fluoride')}}</th>
+   <th>{{_('Magnesium')}}</th>
+   <th>{{_('Potassium')}}</th>
+   <th>{{_('Silicon')}}</th>
+   <th>{{_('Sodium')}}</th>
+   <th>{{_('Sulphate')}}</th>
+   <th>{{_('Calcium Hardness')}}</th>
+   <th>{{_('Nitrate')}}</th>
+   <th>{{_('Nitrite')}}</th>
+   <th>{{_('Aluminum')}}</th>
+   <th>{{_('Barium')}}</th>
+   <th>{{_('Boron')}}</th>
+   <th>{{_('Cadmium')}}</th>
+   <th>{{_('Chromium')}}</th>
+   <th>{{_('Chromium')}} vi</th>
+   <th>{{_('Copper')}}</th>
+   <th>{{_('Iron')}}</th>
+   <th>{{_('Lead')}}</th>
+   <th>{{_('Manganese')}}</th>
+   <th>{{_('Mercury')}}</th>
+   <th>{{_('Nickel')}}</th>
+   <th>{{_('Selenium')}}</th>
+   <th>{{_('Strontium')}}</th>
+   <th>{{_('Uranium')}}</th>
+   <th>{{_('Vanadium')}}</th>
+   <th>{{_('Zinc')}}</th>
+   <th>{{_('Atrazine Metabolites')}}</th>
+   <th>{{_('Diazinon')}}</th>
+   <th>{{_('Dicamba')}}</th>
+   <th>{{_('Dichloromethane')}}</th>
+   <th>{{_('Diclofop Methyl')}}</th>
+   <th>{{_('Metolachlor')}}</th>
+   <th>{{_('Picloram')}}</th>
+   <th>{{_('Simazine')}}</th>
+   <th>{{_('Chloroform')}}</th>
+   <th>{{_('Bromodichloromethane')}}</th>
+   <th>{{_('Dibromochloromethane')}}</th>
+   <th>{{_('Total Trihalomethanes')}}</th>
+   <th>{{_('Dichloroacetic Acid')}}</th>
+   <th>{{_('Trichloroacetic Acid')}}</th>
+   <th>{{_('Bromochloroacetic Acid')}}</th>
+   <th>{{_('Total Haloacetic Acids HAA5')}}</th>
+   <th>{{_('Caffeine')}}</th>
+   <th>{{_('Metformin')}}</th>
+   <th>{{_('Total Organic Carbon')}}</th>
+   <th>{{_('Gross Alpha Radioactivity')}}</th>
+   <th>{{_('Gross Beta Radioactivity')}}</th>
+   <th>{{_('Tritium')}}</th>
+   <th>{{_('MS Rate Site')}}</th>
   </tr>
  </thead>
 
@@ -137,9 +137,10 @@
    <td>{{ sample.tritium }}</td>
    <td>{% for ms_rate in sample.ms_rate_samples %} {{ms_rate.site.name}} {% endfor %}</td>
    <td><a
-    href="{{url_for('main.editDrinkingWaterSample', drinking_water_sample_id = sample.drinking_water_sample_id )}}">Edit</a></td>
+    href="{{url_for('main.editDrinkingWaterSample', drinking_water_sample_id = sample.drinking_water_sample_id )}}">{{_('Edit')}}</a></td>
    <td><a
-    href="{{url_for('main.deleteDrinkingWaterSample', drinking_water_sample_id = sample.drinking_water_sample_id )}}">{{ _('Delete') }}</a></td>
+    href="{{url_for('main.deleteDrinkingWaterSample', drinking_water_sample_id = sample.drinking_water_sample_id )}}">{{
+     _('Delete') }}</a></td>
   </tr>
   {% endfor %}
  </tbody>

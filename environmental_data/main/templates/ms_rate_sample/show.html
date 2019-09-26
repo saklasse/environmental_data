@@ -1,14 +1,14 @@
 <h3>Environmental Health App</h3>
-<a href="/">Back</a>
-<a href="/newMsRateSample">New</a>
+<a href="{{url_for('main.index')}}">{{_('Back')}}</a>
+<a href="{{url_for('main.newMsRateSample')}}">{{_('New')}}</a>
 <table>
  <thead>
   <tr>
-   <th>ID</th>
-   <th>Site ID</th>
-   <th>Date</th>
-   <th>rate</th>
-   <th>Drinking Water Samples</th>
+   <th>{{ _('ID')}}</th>
+   <th>{{ _('Site ID')}}</th>
+   <th>{{ _('Date')}}</th>
+   <th>{{ _('Rate')}}</th>
+   <th>{{ _('Drinking Water Samples')}}</th>
   </tr>
  </thead>
 
@@ -21,9 +21,11 @@
    <td>{{ ms_rate.rate }}</td>
    <td>{% for sample in ms_rate.drinking_water_samples %} {{sample.site.name}} {% endfor %}</td>
    <td><a
-    href="{{url_for('main.editMsRateSample', ms_rate_sample_id = ms_rate.ms_rate_sample_id )}}">Edit</a></td>
+    href="{{url_for('main.editMsRateSample', ms_rate_sample_id = ms_rate.ms_rate_sample_id )}}">{{
+     _('Edit')}}</a></td>
    <td><a
-    href="{{url_for('main.deleteMsRateSample', ms_rate_sample_id = ms_rate.ms_rate_sample_id )}}">{{ _('Delete') }}</a></td>
+    href="{{url_for('main.deleteMsRateSample', ms_rate_sample_id = ms_rate.ms_rate_sample_id )}}">{{
+     _('Delete') }}</a></td>
   </tr>
   {% endfor %}
  </tbody>

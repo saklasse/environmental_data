@@ -1,12 +1,13 @@
-<h3>Environmental Health App</h3>
+<h3>{{_('Environmental Health App')}}</h3>
 
 <form
  action="{{ url_for('main.deleteMsRateSample', ms_rate_sample_id = MsRateSampleToDelete.ms_rate_sample_id)}}"
  method="post">
  <div class="form-group">
-  <label for="name">Are you sure you want to delete
+  <label for="name"> {{ _('Are you sure you want to delete') }}
    "{{MsRateSampleToDelete.site.name }}"?</label>
-  <button type="submit">Delete</button>
-  <a href='{{url_for('main.list_ms_rate_samples')}}'> Cancel </a>
+  <button type="submit">{{_('Delete')}}</button>
+  <input type="button" onclick="location.href='{{url_for('main.list_ms_rate_samples')}}'"
+   value="{{_('Cancel')}}" />
  </div>
 </form>

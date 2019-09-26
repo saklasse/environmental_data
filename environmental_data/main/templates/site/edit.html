@@ -5,27 +5,28 @@ label {
 	float: left;
 }
 </style>
-<h3>Environmental Health App</h3>
+<h3>{{_('Environmental Health App')}}</h3>
 
 <form action="{{ url_for('main.editSite', site_id = site.site_id)}}" method="post">
  <div class="form-group">
-  <label for="country_id">Country:</label> <select name="country_id" width="300px"> {% for
-   s in country %} {% if s.country_id == site.country_id %}
+  <label for="country_id">{{_('Country')}}:</label> <select name="country_id" width="300px">
+   {% for s in country %} {% if s.country_id == site.country_id %}
    <option value="{{ s.country_id }}" SELECTED>{{ s.name }}</option> {% else %}
    <option value="{{ s.country_id }}">{{ s.name }}</option>> {% endif %} {% endfor %}
 
-  </select><br> <label for="site_type_id">Site:</label> <select name="site_type_id" width="300px">
-   {% for s in site_type %} {% if s.site_type_id == site.site_type_id %}
+  </select><br> <label for="site_type_id">{{_('Site')}}:</label> <select name="site_type_id"
+   width="300px"> {% for s in site_type %} {% if s.site_type_id == site.site_type_id %}
    <option value="{{ s.site_type_id }}" SELECTED>{{ s.name }}</option> {% else %}
    <option value="{{ s.site_type_id }}">{{ s.name }}</option>> {% endif %} {% endfor %}
   </select><br> <label for="name">Name:</label> <input type="text" maxlength="100" name="name"
-   placeholder="Name" value="{{site.name }}"><br> <label for="latitude">Latitude:</label>
+   placeholder="Name" value="{{site.name }}"><br> <label for="latitude">{{_('Latitude')}}:</label>
   <input type="number" name="latitude" step=0.0001 value="{{site.latitude }}"><br> <label
-   for="longitude">Longitude:</label> <input type="number" name="longitude" step=0.0001
+   for="longitude">{{_('Longitude')}}:</label> <input type="number" name="longitude" step=0.0001
    value="{{site.longitude }}"><br>
 
 
-  <button type="submit">Update</button>
-  <input type="button" onclick="location.href='/site';" value="Cancel" />
+  <button type="submit">{{_('Update')}}</button>
+  <input type="button" onclick="location.href='{{url_for('main.list_sites')}}'"
+   value="{{_('Cancel')}}" />
  </div>
 </form>

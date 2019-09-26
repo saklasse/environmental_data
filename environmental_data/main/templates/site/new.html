@@ -5,24 +5,25 @@ label {
 	float: left;
 }
 </style>
-<h3>Environmental Health App</h3>
+<h3>{{_('Environmental Health App')}}</h3>
 
 <form action="#" method="post">
  <div class="form-group">
 
-  <label for="country_id">Country:</label> <select name="country_id" width="300px"> {% for
-   s in country %}
+  <label for="country_id">{{_('Country')}}:</label> <select name="country_id" width="300px">
+   {% for s in country %}
    <option value="{{ s.country_id }}">{{ s.name }}</option> {% endfor %}
-  </select><br> <label for="site_type_id">Site:</label> <select name="site_type_id" width="300px">
-   {% for s in site_type %}
+  </select><br> <label for="site_type_id">{{_('Site')}}:</label> <select name="site_type_id"
+   width="300px"> {% for s in site_type %}
    <option value="{{ s.site_type_id }}">{{ s.name }}</option> {% endfor %}
-  </select><br> <label for="name">Name:</label> <input type="text" maxlength="100" name="name"
-   placeholder="Name"><br> <label for="latitude">Latitude:</label> <input type="number"
-   name="latitude" step=0.0001><br> <label for="longitude">Longitude:</label> <input
-   type="number" name="longitude" step=0.0001><br>
+  </select><br> <label for="name">{{_('Name')}}:</label> <input type="text" maxlength="100" name="name"
+   placeholder="Name"><br> <label for="latitude">{{_('Latitude')}}:</label> <input
+   type="number" name="latitude" step=0.0001><br> <label for="longitude">{{_('Longitude')}}:</label>
+  <input type="number" name="longitude" step=0.0001><br>
 
-  <button type="submit">Create</button>
-  <input type="button" onclick="location.href='/site';" value="Cancel" />
+  <button type="submit">{{_('Create')}}</button>
+  <input type="button" onclick="location.href='{{url_for('main.list_sites')}}'"
+   value="{{_('Cancel')}}" />
 
  </div>
 </form>

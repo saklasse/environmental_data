@@ -1,11 +1,11 @@
-<h3>Environmental Health App</h3>
-<a href="/">Back</a>
-<a href="/newSiteType">New</a>
+<h3>{{_('Environmental Health App')}}</h3>
+<a href="{{url_for('main.index')}}">{{_('Back')}}</a>
+<a href="{{url_for('main.newSiteType')}}">{{_('New')}}</a>
 <table>
  <thead>
   <tr>
-   <th>ID</th>
-   <th>Name</th>
+   <th>{{_('ID')}}</th>
+   <th>{{_('Name')}}</th>
   </tr>
  </thead>
 
@@ -14,10 +14,9 @@
   <tr>
    <td>{{ site_type.site_type_id }}</td>
    <td>{{ site_type.name }}</td>
-   <td><a
-    href="{{url_for('main.editSiteType', site_type_id = site_type.site_type_id )}}">Edit</a></td>
-   <td><a
-    href="{{url_for('main.deleteSiteType', site_type_id = site_type.site_type_id )}}">{{ _('Delete') }}</a></td>
+   <td><a href="{{url_for('main.editSiteType', site_type_id = site_type.site_type_id )}}">{{_('Edit')}}</a></td>
+   <td><a href="{{url_for('main.deleteSiteType', site_type_id = site_type.site_type_id )}}">{{
+     _('Delete') }}</a></td>
   </tr>
   </tr>
   {% endfor %}

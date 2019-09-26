@@ -1,14 +1,14 @@
-<h3>Environmental Health App</h3>
-<a href="/">Back</a>
-<a href="/newCountry">New</a>
+<h3>{{_('Environmental Health App')}}</h3>
+<a href="{{url_for('main.index')}}">{{_('Back')}}</a>
+<a href="{{url_for('main.newCountry')}}">{{_('New')}}</a>
 <br>
 
 
 <table>
  <thead>
   <tr>
-   <th>ID</th>
-   <th>Name</th>
+   <th>{{_('ID')}}</th>
+   <th>{{_('Name')}}</th>
   </tr>
  </thead>
 
@@ -17,10 +17,9 @@
   <tr>
    <td>{{ country.country_id }}</td>
    <td>{{ country.name }}</td>
-   <td><a
-    href="{{url_for('main.editCountry', country_id = country.country_id )}}">Edit</a></td>
-   <td><a
-    href="{{url_for('main.deleteCountry', country_id = country.country_id )}}">{{ _('Delete') }}</a></td>
+   <td><a href="{{url_for('main.editCountry', country_id = country.country_id )}}">{{_('Edit')}}</a></td>
+   <td><a href="{{url_for('main.deleteCountry', country_id = country.country_id )}}">{{
+     _('Delete') }}</a></td>
   </tr>
   {% endfor %}
  </tbody>
