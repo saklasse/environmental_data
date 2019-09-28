@@ -1,12 +1,10 @@
 from flask import Blueprint, render_template, request, redirect, url_for, current_app
 from flask_sqlalchemy import SQLAlchemy
 from flask_babel import lazy_gettext
-from environmental_data.main.database.database import country, drinking_water_sample, ms_rate_sample, ms_rate_drinking_water_sample, site_type, site
+from environmental_data.main.database.database import country, drinking_water_sample, ms_rate_sample, ms_rate_drinking_water_sample, site_type, site, db
 import flask_babel
 
 main = Blueprint('main', __name__, template_folder='templates')
-
-db = SQLAlchemy()
 
 
 @main.route('/')
