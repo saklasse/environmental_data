@@ -25,7 +25,7 @@ def newCountry():
         newCountry = country(name=request.form['name'])
         db.session.add(newCountry)
         db.session.commit()
-        return redirect(url_for('list_countries'))
+        return redirect(url_for('main.list_countries'))
     else:
         return render_template('country/new.html')
 
@@ -38,7 +38,7 @@ def editCountry(country_id):
             editedCountry.name = request.form['name']
             db.session.add(editedCountry)
             db.session.commit()
-            return redirect(url_for('list_countries'))
+            return redirect(url_for('main.list_countries'))
     else:
         return render_template('country/edit.html', country=editedCountry)
 
@@ -49,7 +49,7 @@ def deleteCountry(country_id):
     if request.method == 'POST':
         db.session.delete(countryToDelete)
         db.session.commit()
-        return redirect(url_for('list_countries'))
+        return redirect(url_for('main.list_countries'))
     else:
         return render_template('country/delete.html', country=countryToDelete)
     
@@ -69,7 +69,7 @@ def newSite():
                        longitude=request.form['longitude'])
         db.session.add(newSite)
         db.session.commit()
-        return redirect(url_for('list_sites'))
+        return redirect(url_for('main.list_sites'))
     else:
         return render_template('site/new.html', country=country.query.all(), site_type=site_type.query.all())
 
@@ -87,7 +87,7 @@ def editSite(site_id):
 
             db.session.add(editedSite)
             db.session.commit()
-            return redirect(url_for('list_sites'))
+            return redirect(url_for('main.list_sites'))
     else:
         return render_template('site/edit.html', site=editedSite, country=country.query.all(), site_type=site_type.query.all())
 
@@ -98,7 +98,7 @@ def deleteSite(site_id):
     if request.method == 'POST':
         db.session.delete(siteToDelete)
         db.session.commit()
-        return redirect(url_for('list_sites'))
+        return redirect(url_for('main.list_sites'))
     else:
         return render_template('site/delete.html', site=siteToDelete)
 
@@ -119,7 +119,7 @@ def newMsRateSample():
         newMsRateSample = ms_rate_sample(site_id=request.form.get('site_id'), date=request.form['date'], rate=request.form['rate'])
         db.session.add(newMsRateSample)
         db.session.commit()
-        return redirect(url_for('list_ms_rate_samples'))
+        return redirect(url_for('main.list_ms_rate_samples'))
     else:
         return render_template('ms_rate_sample/new.html', site=site.query.all())
 
@@ -130,7 +130,7 @@ def newSiteType():
         newSiteType = site_type(name=request.form['name'])
         db.session.add(newSiteType)
         db.session.commit()
-        return redirect(url_for('list_sites_types'))
+        return redirect(url_for('main.list_sites_types'))
     else:
         return render_template('site_type/new.html')
 
@@ -143,7 +143,7 @@ def editSiteType(site_type_id):
             editedSite.name = request.form['name']
             db.session.add(editedSite)
             db.session.commit()
-            return redirect(url_for('list_sites_types'))
+            return redirect(url_for('main.list_sites_types'))
     else:
         return render_template('site_type/edit.html', site_type=editedSite)
 
@@ -154,7 +154,7 @@ def deleteSiteType(site_type_id):
     if request.method == 'POST':
         db.session.delete(siteTypeToDelete)
         db.session.commit()
-        return redirect(url_for('list_sites_types'))
+        return redirect(url_for('main.list_sites_types'))
     else:
         return render_template('site_type/delete.html', site_type=siteTypeToDelete)
 
@@ -170,7 +170,7 @@ def editMsRateSample(ms_rate_sample_id):
             
             db.session.add(editedMsRateSample)
             db.session.commit()
-            return redirect(url_for('list_ms_rate_samples'))
+            return redirect(url_for('main.list_ms_rate_samples'))
     else:
         return render_template('ms_rate_sample/edit.html', editedMsRateSample=editedMsRateSample, site=site.query.all())
 
@@ -181,7 +181,7 @@ def deleteMsRateSample(ms_rate_sample_id):
     if request.method == 'POST':
         db.session.delete(MsRateSampleToDelete)
         db.session.commit()
-        return redirect(url_for('list_ms_rate_samples'))
+        return redirect(url_for('main.list_ms_rate_samples'))
     else:
         return render_template('ms_rate_sample/delete.html', MsRateSampleToDelete=MsRateSampleToDelete)
 
@@ -198,7 +198,7 @@ def newDrinkingWaterSample():
         setDrinkingWaterSample(newDrinkingWaterSample, request)
         db.session.add(newDrinkingWaterSample)
         db.session.commit()
-        return redirect(url_for('list_drinking_water_samples'))
+        return redirect(url_for('main.list_drinking_water_samples'))
     else:
         return render_template('drinking_water_sample/new.html', site=site.query.all())
 
@@ -339,7 +339,7 @@ def editDrinkingWaterSample(drinking_water_sample_id):
             
             db.session.add(editedDrinkingWaterSample)
             db.session.commit()
-            return redirect(url_for('list_drinking_water_samples'))
+            return redirect(url_for('main.list_drinking_water_samples'))
     else:
         return render_template('drinking_water_sample/edit.html', editedDrinkingWaterSample=editedDrinkingWaterSample, site=site.query.all())
 
@@ -350,7 +350,7 @@ def deleteDrinkingWaterSample(drinking_water_sample_id):
     if request.method == 'POST':
         db.session.delete(drinkingWaterSampleToDelete)
         db.session.commit()
-        return redirect(url_for('list_drinking_water_samples'))
+        return redirect(url_for('main.list_drinking_water_samples'))
     else:
         return render_template('drinking_water_sample/delete.html', drinkingWaterSampleToDelete=drinkingWaterSampleToDelete)
 

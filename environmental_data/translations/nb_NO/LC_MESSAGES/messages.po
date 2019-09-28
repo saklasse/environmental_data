@@ -178,7 +178,7 @@ msgstr ""
 #: environmental_data/main/templates/drinking_water_sample/new.html:19
 #: environmental_data/main/templates/drinking_water_sample/show.html:11
 msgid "Total Coliforms"
-msgstr ""
+msgstr "Totale Coliforms"
 
 #: environmental_data/main/templates/drinking_water_sample/edit.html:26
 msgid ""
@@ -190,7 +190,7 @@ msgstr ""
 msgid ""
 "Heterotrophic\n"
 "   Plate Count"
-msgstr ""
+msgstr "Heterotrofisk Platetelling"
 
 #: environmental_data/main/templates/drinking_water_sample/edit.html:32
 #: environmental_data/main/templates/drinking_water_sample/new.html:25
@@ -202,115 +202,115 @@ msgstr ""
 #: environmental_data/main/templates/drinking_water_sample/new.html:27
 #: environmental_data/main/templates/drinking_water_sample/show.html:15
 msgid "Alkalinity"
-msgstr ""
+msgstr "Alkalitet"
 
 #: environmental_data/main/templates/drinking_water_sample/edit.html:38
 #: environmental_data/main/templates/drinking_water_sample/new.html:30
 #: environmental_data/main/templates/drinking_water_sample/show.html:16
 msgid "Bromide"
-msgstr ""
+msgstr "Bromide"
 
 #: environmental_data/main/templates/drinking_water_sample/edit.html:41
 #: environmental_data/main/templates/drinking_water_sample/new.html:32
 #: environmental_data/main/templates/drinking_water_sample/show.html:17
 msgid "Calcium"
-msgstr ""
+msgstr "Kalsium"
 
 #: environmental_data/main/templates/drinking_water_sample/edit.html:44
 #: environmental_data/main/templates/drinking_water_sample/new.html:35
 #: environmental_data/main/templates/drinking_water_sample/show.html:18
 msgid "Chlorate"
-msgstr ""
+msgstr "Klorat"
 
 #: environmental_data/main/templates/drinking_water_sample/edit.html:47
 #: environmental_data/main/templates/drinking_water_sample/new.html:37
 #: environmental_data/main/templates/drinking_water_sample/show.html:19
 msgid "Chloride"
-msgstr ""
+msgstr "Klorid"
 
 #: environmental_data/main/templates/drinking_water_sample/edit.html:50
 #: environmental_data/main/templates/drinking_water_sample/new.html:40
 #: environmental_data/main/templates/drinking_water_sample/show.html:20
 msgid "Chlorine"
-msgstr ""
+msgstr "Klor"
 
 #: environmental_data/main/templates/drinking_water_sample/edit.html:53
 #: environmental_data/main/templates/drinking_water_sample/new.html:42
 #: environmental_data/main/templates/drinking_water_sample/show.html:21
 msgid "Fluoride"
-msgstr ""
+msgstr "Fluor"
 
 #: environmental_data/main/templates/drinking_water_sample/edit.html:56
 #: environmental_data/main/templates/drinking_water_sample/new.html:45
 #: environmental_data/main/templates/drinking_water_sample/show.html:22
 msgid "Magnesium"
-msgstr ""
+msgstr "Magnesium"
 
 #: environmental_data/main/templates/drinking_water_sample/edit.html:60
 #: environmental_data/main/templates/drinking_water_sample/new.html:48
 #: environmental_data/main/templates/drinking_water_sample/show.html:23
 msgid "Potassium"
-msgstr ""
+msgstr "Kalium"
 
 #: environmental_data/main/templates/drinking_water_sample/edit.html:63
 #: environmental_data/main/templates/drinking_water_sample/new.html:50
 #: environmental_data/main/templates/drinking_water_sample/show.html:24
 msgid "Silicon"
-msgstr ""
+msgstr "Silicon"
 
 #: environmental_data/main/templates/drinking_water_sample/edit.html:66
 #: environmental_data/main/templates/drinking_water_sample/new.html:53
 #: environmental_data/main/templates/drinking_water_sample/show.html:25
 msgid "Sodium"
-msgstr ""
+msgstr "Natrium"
 
 #: environmental_data/main/templates/drinking_water_sample/edit.html:69
 #: environmental_data/main/templates/drinking_water_sample/new.html:55
 #: environmental_data/main/templates/drinking_water_sample/show.html:26
 msgid "Sulphate"
-msgstr ""
+msgstr "Sulfat"
 
 #: environmental_data/main/templates/drinking_water_sample/edit.html:72
 msgid ""
 "Calcium\n"
 "   Hardness"
-msgstr ""
+msgstr "Kalsiumhardhet"
 
 #: environmental_data/main/templates/drinking_water_sample/edit.html:76
 #: environmental_data/main/templates/drinking_water_sample/new.html:61
 #: environmental_data/main/templates/drinking_water_sample/show.html:28
 msgid "Nitrate"
-msgstr ""
+msgstr "Nitrat"
 
 #: environmental_data/main/templates/drinking_water_sample/edit.html:79
 #: environmental_data/main/templates/drinking_water_sample/new.html:63
 #: environmental_data/main/templates/drinking_water_sample/show.html:29
 msgid "Nitrite"
-msgstr ""
+msgstr "Nitritt"
 
 #: environmental_data/main/templates/drinking_water_sample/edit.html:82
 #: environmental_data/main/templates/drinking_water_sample/new.html:66
 #: environmental_data/main/templates/drinking_water_sample/show.html:30
 msgid "Aluminum"
-msgstr ""
+msgstr "Aluminium"
 
 #: environmental_data/main/templates/drinking_water_sample/edit.html:85
 #: environmental_data/main/templates/drinking_water_sample/new.html:68
 #: environmental_data/main/templates/drinking_water_sample/show.html:31
 msgid "Barium"
-msgstr ""
+msgstr "Barium"
 
 #: environmental_data/main/templates/drinking_water_sample/edit.html:88
 #: environmental_data/main/templates/drinking_water_sample/new.html:71
 #: environmental_data/main/templates/drinking_water_sample/show.html:32
 msgid "Boron"
-msgstr ""
+msgstr "Boron"
 
 #: environmental_data/main/templates/drinking_water_sample/edit.html:91
 #: environmental_data/main/templates/drinking_water_sample/new.html:73
 #: environmental_data/main/templates/drinking_water_sample/show.html:33
 msgid "Cadmium"
-msgstr ""
+msgstr "Kadmium"
 
 #: environmental_data/main/templates/drinking_water_sample/edit.html:94
 #: environmental_data/main/templates/drinking_water_sample/edit.html:97
@@ -319,206 +319,206 @@ msgstr ""
 #: environmental_data/main/templates/drinking_water_sample/show.html:34
 #: environmental_data/main/templates/drinking_water_sample/show.html:35
 msgid "Chromium"
-msgstr ""
+msgstr "Krom"
 
 #: environmental_data/main/templates/drinking_water_sample/edit.html:101
 #: environmental_data/main/templates/drinking_water_sample/new.html:81
 #: environmental_data/main/templates/drinking_water_sample/show.html:36
 msgid "Copper"
-msgstr ""
+msgstr "Kobber"
 
 #: environmental_data/main/templates/drinking_water_sample/edit.html:104
 #: environmental_data/main/templates/drinking_water_sample/new.html:84
 #: environmental_data/main/templates/drinking_water_sample/show.html:37
 msgid "Iron"
-msgstr ""
+msgstr "Jern"
 
 #: environmental_data/main/templates/drinking_water_sample/edit.html:107
 #: environmental_data/main/templates/drinking_water_sample/new.html:86
 #: environmental_data/main/templates/drinking_water_sample/show.html:38
 msgid "Lead"
-msgstr ""
+msgstr "Bly"
 
 #: environmental_data/main/templates/drinking_water_sample/edit.html:110
 #: environmental_data/main/templates/drinking_water_sample/new.html:89
 #: environmental_data/main/templates/drinking_water_sample/show.html:39
 msgid "Manganese"
-msgstr ""
+msgstr "Mangan"
 
 #: environmental_data/main/templates/drinking_water_sample/edit.html:113
 #: environmental_data/main/templates/drinking_water_sample/new.html:91
 #: environmental_data/main/templates/drinking_water_sample/show.html:40
 msgid "Mercury"
-msgstr ""
+msgstr "Kvikksølv"
 
 #: environmental_data/main/templates/drinking_water_sample/edit.html:116
 #: environmental_data/main/templates/drinking_water_sample/new.html:94
 #: environmental_data/main/templates/drinking_water_sample/show.html:41
 msgid "Nickel"
-msgstr ""
+msgstr "Nikkel"
 
 #: environmental_data/main/templates/drinking_water_sample/edit.html:119
 #: environmental_data/main/templates/drinking_water_sample/new.html:96
 #: environmental_data/main/templates/drinking_water_sample/show.html:42
 msgid "Selenium"
-msgstr ""
+msgstr "Selen"
 
 #: environmental_data/main/templates/drinking_water_sample/edit.html:122
 #: environmental_data/main/templates/drinking_water_sample/new.html:99
 #: environmental_data/main/templates/drinking_water_sample/show.html:43
 msgid "Strontium"
-msgstr ""
+msgstr "Strontium"
 
 #: environmental_data/main/templates/drinking_water_sample/edit.html:126
 #: environmental_data/main/templates/drinking_water_sample/new.html:101
 #: environmental_data/main/templates/drinking_water_sample/show.html:44
 msgid "Uranium"
-msgstr ""
+msgstr "Uran"
 
 #: environmental_data/main/templates/drinking_water_sample/edit.html:129
 #: environmental_data/main/templates/drinking_water_sample/new.html:104
 #: environmental_data/main/templates/drinking_water_sample/show.html:45
 msgid "Vanadium"
-msgstr ""
+msgstr "Vanadium"
 
 #: environmental_data/main/templates/drinking_water_sample/edit.html:132
 #: environmental_data/main/templates/drinking_water_sample/new.html:106
 #: environmental_data/main/templates/drinking_water_sample/show.html:46
 msgid "Zinc"
-msgstr ""
+msgstr "Sink"
 
 #: environmental_data/main/templates/drinking_water_sample/edit.html:135
 msgid ""
 "Atrazine\n"
 "   Metabolites"
-msgstr ""
+msgstr "Atrazinmetabolitter"
 
 #: environmental_data/main/templates/drinking_water_sample/edit.html:139
 #: environmental_data/main/templates/drinking_water_sample/new.html:112
 #: environmental_data/main/templates/drinking_water_sample/show.html:48
 msgid "Diazinon"
-msgstr ""
+msgstr "Diazinon"
 
 #: environmental_data/main/templates/drinking_water_sample/edit.html:142
 #: environmental_data/main/templates/drinking_water_sample/new.html:115
 #: environmental_data/main/templates/drinking_water_sample/show.html:49
 msgid "Dicamba"
-msgstr ""
+msgstr "Dicamba"
 
 #: environmental_data/main/templates/drinking_water_sample/edit.html:145
 #: environmental_data/main/templates/drinking_water_sample/new.html:118
 #: environmental_data/main/templates/drinking_water_sample/show.html:50
 msgid "Dichloromethane"
-msgstr ""
+msgstr "Diklormetan"
 
 #: environmental_data/main/templates/drinking_water_sample/edit.html:149
 msgid ""
 "Diclofop\n"
 "   Methyl"
-msgstr ""
+msgstr "Diclofop Metyl"
 
 #: environmental_data/main/templates/drinking_water_sample/edit.html:153
 #: environmental_data/main/templates/drinking_water_sample/new.html:124
 #: environmental_data/main/templates/drinking_water_sample/show.html:52
 msgid "Metolachlor"
-msgstr ""
+msgstr "Metolachlor"
 
 #: environmental_data/main/templates/drinking_water_sample/edit.html:157
 #: environmental_data/main/templates/drinking_water_sample/new.html:126
 #: environmental_data/main/templates/drinking_water_sample/show.html:53
 msgid "Picloram"
-msgstr ""
+msgstr "Picloram"
 
 #: environmental_data/main/templates/drinking_water_sample/edit.html:160
 #: environmental_data/main/templates/drinking_water_sample/new.html:129
 #: environmental_data/main/templates/drinking_water_sample/show.html:54
 msgid "Simazine"
-msgstr ""
+msgstr "Simazin"
 
 #: environmental_data/main/templates/drinking_water_sample/edit.html:163
 #: environmental_data/main/templates/drinking_water_sample/new.html:132
 #: environmental_data/main/templates/drinking_water_sample/show.html:55
 msgid "Chloroform"
-msgstr ""
+msgstr "Kloroform"
 
 #: environmental_data/main/templates/drinking_water_sample/edit.html:167
 #: environmental_data/main/templates/drinking_water_sample/new.html:134
 #: environmental_data/main/templates/drinking_water_sample/show.html:56
 msgid "Bromodichloromethane"
-msgstr ""
+msgstr "Bromodichloromethane"
 
 #: environmental_data/main/templates/drinking_water_sample/edit.html:172
 #: environmental_data/main/templates/drinking_water_sample/new.html:138
 #: environmental_data/main/templates/drinking_water_sample/show.html:57
 msgid "Dibromochloromethane"
-msgstr ""
+msgstr "Dibromklormetan"
 
 #: environmental_data/main/templates/drinking_water_sample/edit.html:177
 #: environmental_data/main/templates/drinking_water_sample/new.html:142
 #: environmental_data/main/templates/drinking_water_sample/show.html:58
 msgid "Total Trihalomethanes"
-msgstr ""
+msgstr "Totalt Trihalometaner"
 
 #: environmental_data/main/templates/drinking_water_sample/edit.html:182
 #: environmental_data/main/templates/drinking_water_sample/new.html:146
 #: environmental_data/main/templates/drinking_water_sample/show.html:59
 msgid "Dichloroacetic Acid"
-msgstr ""
+msgstr "Dikloreddiksyre"
 
 #: environmental_data/main/templates/drinking_water_sample/edit.html:187
 #: environmental_data/main/templates/drinking_water_sample/new.html:150
 #: environmental_data/main/templates/drinking_water_sample/show.html:60
 msgid "Trichloroacetic Acid"
-msgstr ""
+msgstr "Trikloreddiksyre"
 
 #: environmental_data/main/templates/drinking_water_sample/edit.html:192
 #: environmental_data/main/templates/drinking_water_sample/new.html:154
 #: environmental_data/main/templates/drinking_water_sample/show.html:61
 msgid "Bromochloroacetic Acid"
-msgstr ""
+msgstr "Bromokloreddiksyre"
 
 #: environmental_data/main/templates/drinking_water_sample/edit.html:197
 #: environmental_data/main/templates/drinking_water_sample/new.html:158
 #: environmental_data/main/templates/drinking_water_sample/show.html:62
 msgid "Total Haloacetic Acids HAA5"
-msgstr ""
+msgstr "Totalt Haloeddiksyre HAA5"
 
 #: environmental_data/main/templates/drinking_water_sample/edit.html:202
 #: environmental_data/main/templates/drinking_water_sample/new.html:162
 #: environmental_data/main/templates/drinking_water_sample/show.html:63
 msgid "Caffeine"
-msgstr ""
+msgstr "Koffein"
 
 #: environmental_data/main/templates/drinking_water_sample/edit.html:205
 #: environmental_data/main/templates/drinking_water_sample/new.html:164
 #: environmental_data/main/templates/drinking_water_sample/show.html:64
 msgid "Metformin"
-msgstr ""
+msgstr "Metformin"
 
 #: environmental_data/main/templates/drinking_water_sample/edit.html:208
 #: environmental_data/main/templates/drinking_water_sample/new.html:167
 msgid ""
 "Total Organic\n"
 "   Carbon"
-msgstr ""
+msgstr "Totalt Organisk Karbon"
 
 #: environmental_data/main/templates/drinking_water_sample/edit.html:213
 #: environmental_data/main/templates/drinking_water_sample/new.html:171
 #: environmental_data/main/templates/drinking_water_sample/show.html:66
 msgid "Gross Alpha Radioactivity"
-msgstr ""
+msgstr "Brutto Alpha Radioaktivitet"
 
 #: environmental_data/main/templates/drinking_water_sample/edit.html:217
 #: environmental_data/main/templates/drinking_water_sample/new.html:174
 #: environmental_data/main/templates/drinking_water_sample/show.html:67
 msgid "Gross Beta Radioactivity"
-msgstr ""
+msgstr "Brutto Beta Radioaktivitet"
 
 #: environmental_data/main/templates/drinking_water_sample/edit.html:220
 #: environmental_data/main/templates/drinking_water_sample/new.html:176
 #: environmental_data/main/templates/drinking_water_sample/show.html:68
 msgid "Tritium"
-msgstr ""
+msgstr "Tritium"
 
 #: environmental_data/main/templates/drinking_water_sample/edit.html:223
 msgid ""
@@ -541,22 +541,22 @@ msgstr ""
 #: environmental_data/main/templates/drinking_water_sample/new.html:23
 #: environmental_data/main/templates/drinking_water_sample/show.html:13
 msgid "Heterotrophic Plate Count"
-msgstr ""
+msgstr "Heterotrofisk Platetelling"
 
 #: environmental_data/main/templates/drinking_water_sample/new.html:58
 #: environmental_data/main/templates/drinking_water_sample/show.html:27
 msgid "Calcium Hardness"
-msgstr ""
+msgstr "Kalsiumhardhet"
 
 #: environmental_data/main/templates/drinking_water_sample/new.html:109
 #: environmental_data/main/templates/drinking_water_sample/show.html:47
 msgid "Atrazine Metabolites"
-msgstr ""
+msgstr "Atrazinmetabolitter"
 
 #: environmental_data/main/templates/drinking_water_sample/new.html:121
 #: environmental_data/main/templates/drinking_water_sample/show.html:51
 msgid "Diclofop Methyl"
-msgstr ""
+msgstr "Diclofop metyl"
 
 #: environmental_data/main/templates/drinking_water_sample/show.html:7
 msgid "Drinking Water Sample ID"
@@ -564,7 +564,7 @@ msgstr ""
 
 #: environmental_data/main/templates/drinking_water_sample/show.html:65
 msgid "Total Organic Carbon"
-msgstr ""
+msgstr "Totalt Organisk Karbon"
 
 #: environmental_data/main/templates/drinking_water_sample/show.html:69
 msgid "MS Rate Site"
